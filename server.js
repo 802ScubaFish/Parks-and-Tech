@@ -7,6 +7,11 @@ const public = path.resolve('./public')
 // Sets up Static File Sever below on one line
 app.use(express.static('./public'))
 
+// Sets up API end point that will allow access to the API Key
+app.get('/apiKey', (req, res) =>{
+    res.send(process.env.MAP_API_KEY)
+})
+
 // 404 path uses '*' to select all other users inputed paths to direct to the 404 Page
 app.get('*', (req, res) => {
     res.sendFile(public + '/404.html')

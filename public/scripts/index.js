@@ -11,5 +11,3 @@ function initMap() {
         zoom: 8
     });
 }
-
-initMap();
