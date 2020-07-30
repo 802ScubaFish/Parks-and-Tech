@@ -13,6 +13,23 @@ app.get('/apiKey', (req, res) => {
     res.send(process.env.MAP_API_KEY)
 })
 
+//Sets up Firebase API
+app.get("/firebaseApiKey", (req, res)=>{
+    var firebaseConfig = {
+        apiKey: process.env.firebaseApiKey,
+        authDomain: process.env.firebaseAuthDomain,
+        databaseURL: process.env.firebaseDatabaseURL,
+        projectId: "parksandtechvt",
+        storageBucket: process.env.firebaseStorageBucket,
+        messagingSenderId: process.env.firebaseMessagingSenderId,
+        appId: process.env.firebaseAppId,
+        measurementId: process.env.firebaseMeasurementId
+      };
+
+    res.send(firebaseConfig)
+    
+})
+
 // 404 path uses '*' to select all other users inputed paths to direct to the 404 Page
 app.get('*', (req, res) => {
     res.sendFile(public + '/404.html')
