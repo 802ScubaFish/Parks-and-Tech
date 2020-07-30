@@ -1,14 +1,15 @@
+require ('dotenv').config();
 const express = require('express');
-const app = express()
-const port = process.env.PORT || 5000
-const path = require('path')
-const public = path.resolve('./public')
+const app = express();
+const port = process.env.PORT || 5000;
+const path = require('path');
+const public = path.resolve('./public');
 
 // Sets up Static File Sever below on one line
 app.use(express.static('./public'))
 
 // Sets up API end point that will allow access to the API Key
-app.get('/apiKey', (req, res) =>{
+app.get('/apiKey', (req, res) => {
     res.send(process.env.MAP_API_KEY)
 })
 
