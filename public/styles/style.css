@@ -5,23 +5,23 @@ body {
   margin: 0;
   padding: 0;
   box-sizing: border-box;
+  font-family: 'Montserrat', sans-serif;
 }
 
 /* Donate span */
-#span{
-    
-    background-color:#E6E6E6;
-    display: flex;
-    justify-content: center;
-    width: 100%;
-    font-size: 120%;
-    color: #2ac194;
-    text-shadow: 1px 1px black;
+#span {
+  background-color: #f37521;
+  display: flex;
+  justify-content: center;
+  width: 100%;
+  font-size: 120%;
+  color: #2ac194;
+  text-shadow: 1px 1px black;
 }
 
-a{
- text-decoration: none;
- color: #2ac194;
+a {
+  text-decoration: none;
+  color: #0054a6;
 }
 
 /* Banner and Nav Bar */
@@ -34,9 +34,9 @@ a{
   width: 100%;
 }
 
- /* Might use this later for a donate button. Thinking to put the donate in the dropdown*/
- 
- .donateButton {
+/* Might use this later for a donate button. Thinking to put the donate in the dropdown*/
+
+.donateButton {
   background-color: #2ac194;
   border: 1px solid gray;
   margin-top: 30%;
@@ -50,11 +50,7 @@ a{
   border-radius: 35%;
   padding: 5px 15px;
   */
-} 
-
-
-
-
+}
 
 /* Nav Bar Main Logo */
 #logo {
@@ -112,6 +108,8 @@ a{
   transform: translateY(16px);
 }
 
+
+
 /* Main section */
 main {
   height: 60%;
@@ -130,7 +128,16 @@ main {
 }
 
 /* Sets up individual event styling */
-#eventsList {
+.eventTitle {
+  display: flex;
+  justify-content: center;
+  background-color:/*#f37521 */#d8d9d8; 
+  width: 100%;
+  padding: 5%;
+  margin-top: 0;
+}
+
+.eventsList {
   display: flex;
   flex-direction: column;
   justify-content: center;
@@ -138,11 +145,15 @@ main {
 }
 
 #eventHead {
-  font-size: 120%;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  font-size: 140%;
   margin-top: 6%;
 }
 
-#singleEvent {
+.singleEvent {
   display: flex;
   flex-direction: column;
   justify-content: center;
@@ -151,39 +162,51 @@ main {
   border-bottom: 1px solid #0054a6;
 }
 
-#eventTitle {
-}
-
-#eventDesc {
+.eventDesc {
   padding-left: 5%;
 }
 
+/* Mission Statement Styling Here */
+#missStatement {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  flex-direction: column;
+  background-color: #2ac194;
+}
 
+#missTitle {
+  margin-bottom: -5%;
+}
+
+#whiteSpace {
+  height: 10px;
+}
 
 /* Styling for Footer Section Here */
 #footer {
   display: flex;
   justify-content: space-between;
   background-color: #0db8d3;
-  height: 45%;
+  height: 50%;
   width: 100%;
 }
 
 #footerRow {
-    display: flex;
-    flex-direction: row;
-    justify-content: center;
-    align-items: center;
+  display: flex;
+  flex-direction: row;
+  justify-content: center;
+  align-items: center;
 }
 
 #footerLogo {
-display: flex;
-justify-content: center;
+  display: flex;
+  justify-content: center;
 }
 
 #contactInfo {
-    display: flex;
-    justify-content: center;
-    margin-left: 27%;
-    font-size: 90%;
+  display: flex;
+  justify-content: center;
+  margin-left: 27%;
+  font-size: 90%;
 }
