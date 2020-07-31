@@ -8,6 +8,9 @@ const public = path.resolve('./public');
 // Sets up Static File Sever below on one line
 app.use(express.static('./public'))
 
+app.get("/login", (req, res) => {
+    res.sendFile(public + "/login.html")
+})
 // Sets up API end point that will allow access to the API Key
 app.get('/apiKey', (req, res) => {
     res.send(process.env.MAP_API_KEY)
