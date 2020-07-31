@@ -2,6 +2,7 @@
 
 let map;
 
+// Creates the map and centers on Vermont
 function initMap() {
     map = new google.maps.Map(document.getElementById("map"), {
         center: {
@@ -12,3 +13,16 @@ function initMap() {
     });
     
 }
+
+//Hamburger Animation
+const menuButton = document.querySelector(".menuButton");
+let menuIsOpen =false;
+menuButton.addEventListener("click", ()=>{
+    if (!menuIsOpen){
+        menuButton.classList.add("open");
+        menuIsOpen=true;
+    }else{
+        menuButton.classList.remove("open");
+        menuIsOpen= false;
+    }
+})

@@ -14,7 +14,53 @@ const parksAndTechApp = firebase.initializeApp(firebaseConfig);
 const myDb = parksAndTechApp.database();
 const googleProvider = new firebase.auth.GoogleAuthProvider();
 
-//Sign in with user and password
-// parksAndTechApp.auth()
-// .signInWithEmailAndPassword(user, password)
-// .then((res) => {
+
+// Sign user in +
+// Display a list of all events in the 'events-list'. This is the basic layout to pull events
+// from the data base, and then create a list item for each individual event. 
+// Leaving here as a placeholder for when we have information in a database to pull from.
+
+// const userDisplay = document.getElementById('eventsList')
+
+// document.getElementById('signinForm').addEventListener('submit', (evt) => {
+//     evt.preventDefault()
+//     let user = document.getElementById('userEmail').value
+//     let password = document.getElementById('userPassword').value
+  
+//     document.getElementById('userEmail').value = ''
+//     document.getElementById('userPassword').value = ''
+  
+//     myApp.auth().signInWithEmailAndPassword(user, password).then((res) => {
+//       welcomeMessage.textContent = "Welcome, " + (res.user.displayName || res.user.email) + '!'
+  
+//       myDb.ref('/users/' + res.user.uid).on('value', (evt) => {
+//         let userObj = evt.val()
+//         console.log(userObj)
+  
+//         if (userObj.role === 'admin') {
+//           console.log('is admin')
+//           myDb.ref('/users').once('value', (evt) => {
+//             let allUsersObj = evt.val()
+  
+//             for (let id in allUsersObj) {
+//               let userItem = `<li><h5>${(allUsersObj[id].nickName || 'anonymous') + ':'}</h5><form id=${id}><input type='text' value=${allUsersObj[id].role} id="${'input-' + id}" /><input type='submit' /></form></li>`
+//               userDisplay.innerHTML += userItem
+//             }
+//             for (let id in allUsersObj) {
+//               console.log(document.getElementById('input-' + id))
+//               document.getElementById(id).addEventListener('submit', (evt) => {
+//                 evt.preventDefault()
+  
+//                 let newRole = document.getElementById('input-' + id).value
+//                 myDb.ref('/users/' + id).update({
+//                   role: newRole
+//                 })
+//               })
+//             }
+//           })
+//         }
+//       })
+//     }).catch(error => {
+//       alert(error.message)
+//     })
+//   })
