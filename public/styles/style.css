@@ -72,6 +72,13 @@ body {
   transition: all 0.5s ease-in-out;
 }
 
+.burgerMenuButton::before {
+  transform: translateY(-16px);
+}
+.burgerMenuButton::after {
+  transform: translateY(16px);
+}
+
 /* Main section */
 main {
   height: 60%;
@@ -98,7 +105,7 @@ main {
 }
 
 #eventHead {
-  font-size: 100%;
+  font-size: 125%;
 }
 
 #singleEvent {
@@ -106,6 +113,14 @@ main {
   flex-direction: column;
   justify-content: center;
   align-items: center;
-  border-top: 1px solid #0054A6;
-  border-bottom: 1px solid #0054A6;
+  border-top: 1px solid #0054a6;
+  border-bottom: 1px solid #0054a6;
 }
+
+#eventTitle {
+
+}
+
+#eventDesc [
+
+]
