@@ -6,18 +6,30 @@
     <title>Log In</title>
 </head>
 <body>
-    <h1>hello from login</h1>
-
-    <form action="login" method="post">
+    <div id="login_div">
+    <h1>Welcome, please login</h1>
         
-      
-        <div class="container">
+        <div class="login-container">
           <label id= "name" for="name"><b>Username</b></label>
-          <input type="text" placeholder="Enter Username" name="name" required>
+          <input id="email_field" type="text" placeholder="Enter Username" name="name" required>
       
           <label id= "password" for="psw"><b>Password</b></label>
-          <input type="password" placeholder="Enter Password" name="psw" required>
-          <button type="submit">Login</button>
+          <input id="password_field" type="password" placeholder="Enter Password" name="psw" required>
+
+          <button onClick="login()" type="submit">Login</button>
+        </div>
+    </div>
+
+        <div id="user_div">
+    <h1 id="user_div">You are logged in</h1>
+        <form>
+            <label id="event-name">Event Name</label>
+            <label id="event-desc">Event Description</label>
+        </form>
+
+    </div>
+
+
       <script src = "./scripts/login.js"></script>
 </body>
 </html>
