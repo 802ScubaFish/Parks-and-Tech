@@ -15,6 +15,7 @@ body {
 } */
 
 /* Banner and Nav Bar */
+
 #topBanner {
   display: flex;
   justify-content: space-between;
@@ -22,6 +23,28 @@ body {
   height: 18%;
   width: 100%;
 }
+
+ /* Might use this later for a donate button. Thinking to put the donate in the dropdown*/
+ 
+ .donateButton {
+  background-color: #2ac194;
+  border: 1px solid gray;
+  margin-top: 30%;
+  margin-left: 50%;
+
+  /*height: 50px;
+  width: 100px;
+  color: white;
+  display: flex;
+  justify-content: center;
+  border-radius: 35%;
+  padding: 5px 15px;
+  */
+} 
+
+
+
+
 
 /* Nav Bar Main Logo */
 #logo {
@@ -119,9 +142,38 @@ main {
 }
 
 #eventTitle {
- 
 }
 
 #eventDesc {
- 
+  padding-left: 5%;
+}
+
+
+
+/* Styling for Footer Section Here */
+#footer {
+  display: flex;
+  justify-content: space-between;
+  background-color: #0db8d3;
+  height: 45%;
+  width: 100%;
+}
+
+#footerRow {
+    display: flex;
+    flex-direction: row;
+    justify-content: center;
+    align-items: center;
+}
+
+#footerLogo {
+display: flex;
+justify-content: center;
+}
+
+#contactInfo {
+    display: flex;
+    justify-content: center;
+    margin-left: 27%;
+    font-size: 90%;
 }
