@@ -1,15 +1,44 @@
-/* Always set the map height explicitly to define the size of the div
-       * element that contains the map. */
-       #map {
-        height: 60%;
-        width: auto;
-    }
+/* CSS reset */
+html,
+body {
+  height: 100%;
+  margin: 0;
+  padding: 0;
+}
 
-    /* Optional: Makes the sample page fill the window. */
-    html,
-    body {
-        height: 100%;
-        margin: 0;
-        padding: 0;
-        background-color: gray;
-    }
+/* Banner and Nav Bar */
+#topBanner {
+  display: flex;
+  justify-content: space-between;
+  background-color: #0db8d3;
+  height: 18%;
+  width: 100%;
+}
+
+/* Nav Bar Main Logo */
+#logo {
+  height: 75px;
+  width: 75px;
+  display: flex;
+  margin-top: 25%;
+  margin-bottom: 10%;
+  margin-left: 20%;
+  border-radius: 50%;
+}
+
+/* Main section */
+main{
+    height: 60%;
+    width: 100%;
+    padding-top:20px;
+}
+/* Sets the map explicitely */
+#map {
+    margin: auto;
+    padding-top: 20px;
+    padding-bottom: 20px;
+    height: 80%;
+    width: 80%;
+    border: 1px solid gray;
+    background-color: white;
+  }
