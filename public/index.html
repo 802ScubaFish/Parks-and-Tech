@@ -2,30 +2,41 @@
 <html>
 
 <head>
-    <title>Simple Map</title>
-    <!-- Adds google maps polyfill-->
-    <script src="https://polyfill.io/v3/polyfill.min.js?features=default"></script>
-    <link rel="stylesheet" href="/styles/style.css">
+  <title>Simple Map</title>
+  <!--Sets so that it is mobile-friendly/mobile first-->
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <!-- Adds google maps polyfill-->
+  <script src="https://polyfill.io/v3/polyfill.min.js?features=default"></script>
+  <link rel="stylesheet" href="/styles/style.css">
 
-   <!-- The core Firebase JS SDK is always required and must be listed first -->
-<script src="https://www.gstatic.com/firebasejs/7.17.1/firebase-app.js"></script>
+  <!-- The core Firebase JS SDK is always required and must be listed first -->
+  <script src="https://www.gstatic.com/firebasejs/7.17.1/firebase-app.js"></script>
 
-<!-- TODO: Add SDKs for Firebase products that you want to use -->
-<script src="https://www.gstatic.com/firebasejs/7.17.1/firebase-analytics.js"></script>
+  <!-- TODO: Add SDKs for Firebase products that you want to use -->
+  <script src="https://www.gstatic.com/firebasejs/7.17.1/firebase-analytics.js"></script>
 
 </head>
 
 <body>
-    <form id='signinForm'>
+  <div id="topBanner">
+    <a href="https://www.vrpa.org/"><img id='logo' src="/imgs/VRPA_logo_color.jpg" alt="VRPA logo"></a>
+    <nav id='hamburgerMenu'>
+      <form id='signinForm'>
         <input name='email' id='userEmail' type='text' />
         <input name='password' id='userPassword' type='password' />
         <input type='submit' />
       </form>
-      
-    <div id="map"></div>
+    </nav>
+  </div>
 
-    <script src='/scripts/index.js'></script>
-    <script src='/scripts/mapSetup.js'></script>
+  <main>
+    <div id="map">
+
+    </div>
+  </main>
+
+  <script src='/scripts/index.js'></script>
+  <script src='/scripts/mapSetup.js'></script>
 </body>
 
 </html>
