@@ -105,7 +105,8 @@ main {
 }
 
 #eventHead {
-  font-size: 125%;
+  font-size: 120%;
+  margin-top: 6%;
 }
 
 #singleEvent {
@@ -118,9 +119,9 @@ main {
 }
 
 #eventTitle {
-
+ 
 }
 
-#eventDesc [
-
-]
+#eventDesc {
+ 
+}
