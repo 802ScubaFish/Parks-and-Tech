@@ -4,7 +4,8 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <link rel="stylesheet" href="styles/style.css" />
+    <link rel="stylesheet" href="styles/login.css" />
+    <link href="https://fonts.googleapis.com/css2?family=Montserrat:wght@200&display=swap" rel="stylesheet">
     <title>Log In</title>
 </head>
 
@@ -13,26 +14,44 @@
         <h1>Welcome, please login</h1>
 
         <div class="login-container">
-            <label id="name" for="name"><b>Username</b></label>
-            <input id="email_field" type="text" placeholder="Enter Username" name="name" required>
+            <!-- <label id="name" for="name"><b>Username</b></label> -->
+            <input id='email_field' class="login-field" type="text" placeholder="Enter Username" name="name" required>
 
-            <label id="password" for="psw"><b>Password</b></label>
-            <input id="password_field" type="password" placeholder="Enter Password" name="psw" required>
+            <!-- <label id="password" for="psw"><b>Password</b></label> -->
+            <input id='password_field' class="login-field" type="password" placeholder="Enter Password" name="psw" required>
 
             <button onClick="login()" type="submit">Login</button>
         </div>
     </div>
 
     <div id="user_div" class="loggedin-div">
-        <h1>You are logged in</h1>
-        <form>
-            <label>Event Name</label>
-            <input id="event-name" type="text" />
+        <h1>Create New Event Form</h1>
+        <form id='event-form'>
+            <label class='eventClass'>Event Name
+                <input class="event-inputs" type="text" /></label>
 
-            <label>Event Description</label>
-            <input id="event-desc" type="text" />
+            <label class='eventClass'>Event Date
+                <input class="event-inputs" type="date" /></label>
 
-            <button onClick="logout()">Logout</button>
+            <label class='eventClass'>Event Time
+                <input class="event-inputs" type="time" /></label>
+
+            <label class='eventClass'>Event Description
+                <input clas="event-inputs" type="text" /></label>
+
+            <label class='eventClass'>Event Location
+                <input class="event-inputs" type='text' /></label>
+
+            <label class='eventClass'>Event Covid Status
+                <input class="event-inputs" type='text' /></label>
+
+            <label class='eventClass'>Event Expiration
+                <input class="event-inputs" type='date' /></label>
+
+            <div id='eventButtons'>
+                <button onClick="submit">Submit Event</button>
+                <button id='logoutButton' onClick="logout()">Logout</button>
+            </div>
         </form>
     </div>
 
