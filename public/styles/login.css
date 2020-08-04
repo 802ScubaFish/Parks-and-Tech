@@ -14,13 +14,27 @@ button {
     font-size: 120%;
 }
 
-
 .loggedInDiv {
-    width: 30%;
-    margin: 0px auto;
+    width: 40%;
+    margin: auto;
     margin-top: 150px;
-    padding: 20px;
     display: none;
+    flex-direction: column;
+}
+
+#logInButtons {
+    width:50%;
+    margin: auto;
+}
+
+#logo {
+    height:100px;
+    width:100px;
+    margin: auto;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    padding-bottom: 4%;
 }
 
 
@@ -38,11 +52,17 @@ h1 {
     margin: auto;
 }
 
+ #wholeEventForm{
+    display: none;
+    width: 30vw;
+    margin: auto
+} 
 
 #eventForm {
     display: flex;
     flex-direction: column;
-    justify-content: space-between;
+    padding-left: 10%;
+    padding-right: 10%;
 }
 
 
@@ -81,10 +101,17 @@ h1 {
     padding-top: 5vh;
 }
 
+#wholeFacilityForm {
+    display: none;
+    width: 30vw;
+    margin: auto
+} 
+
 #facilitiesForm {
     display: flex;
     flex-direction: column;
-    justify-content: space-between;
+    padding-left: 10%;
+    padding-right: 10%;
 }
 
 .facilityClass {

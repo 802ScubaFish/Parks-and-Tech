@@ -28,6 +28,16 @@
 
     <!-- If a user is logged in, you see an Event form -->
     <div id="userDiv" class="loggedInDiv">
+        <h1>Welcome to the Parks App</h1>
+        <img id='logo' src="/imgs/VRPA_logo_color.jpg" alt="VRPA logo">
+        <div id='logInButtons'>
+            <button id='EventFormButton' onClick='displayEventForm()'>Create New Event</button>
+            <button id='faciltyFormButton' onClick='displayFacilityForm()'>Create New Facility</button>
+            <button onClick="logout()">Logout</button>
+        </div>
+    </div>
+
+    <div id='wholeEventForm'>
         <h1>Create New Event Form</h1>
         <form id='eventForm'>
             <label class='eventClass'>Event Name
@@ -59,9 +69,9 @@
 
             </div>
         </form>
+    </div>
 
-
-
+    <div id='wholeFacilityForm'>
         <form id='facilitiesForm'>
             <h1>Add A New Facility</h1>
             <label class='facilityClass'>Facility Name
@@ -89,9 +99,9 @@
                 <button onClick="submitFacility()">Submit Facility</button>
             </div>
         </form>
-
-        <button id='logoutButton' onClick="logout()">Logout</button>
     </div>
+
+
 
     <script src="https://www.gstatic.com/firebasejs/7.17.1/firebase-app.js"></script>
     <script src="https://www.gstatic.com/firebasejs/7.17.1/firebase-auth.js"></script>
