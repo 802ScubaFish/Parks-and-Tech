@@ -1,3 +1,4 @@
+//Firebase setup 
 const firebaseConfig = {
   apiKey: "AIzaSyAR7Mp0IGpvHdJsy1VTJZwn3SBO_4txueU",
   authDomain: "parksandtechvt.firebaseapp.com",

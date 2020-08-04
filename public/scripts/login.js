@@ -3,22 +3,22 @@
 parksAndTechApp.auth().onAuthStateChanged(function(user) {
     if (user) {
       // User is signed in.
-      document.getElementById("user_div").style.display = "block";
-      document.getElementById("login_div").style.display = "none";
+      document.getElementById("userDiv").style.display = "block";
+      document.getElementById("loginDiv").style.display = "none";
 
     } else {
       // No user is signed in.
 
-      document.getElementById("user_div").style.display = "none";
-      document.getElementById("login_div").style.display = "block";
+      document.getElementById("userDiv").style.display = "none";
+      document.getElementById("loginDiv").style.display = "block";
     }
   });
 
-
+//Logs User In
 function login() {
     
-    var userEmail = document.getElementById("email_field").value;
-    var userPassword = document.getElementById("password_field").value;
+    var userEmail = document.getElementById("emailField").value;
+    var userPassword = document.getElementById("passwordField").value;
 
     
     parksAndTechApp.auth().signInWithEmailAndPassword(userEmail, userPassword).catch(function(error) {

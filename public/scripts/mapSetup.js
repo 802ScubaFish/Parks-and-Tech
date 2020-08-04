@@ -1,3 +1,5 @@
+
+//Creates the map
 let script = document.createElement('script')
 
 fetch('/apiKey')
