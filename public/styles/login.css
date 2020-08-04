@@ -3,7 +3,7 @@ input, button {
     font-weight: 700;
 }
 
-.loggedin-div {
+.loggedInDiv {
     width: 20%;
     margin: 0px auto;
     margin-top: 150px;
@@ -13,7 +13,7 @@ input, button {
 
 
 
-.main-div input {
+.mainDiv input {
     display: block;
     border: 1px solid #ccc;
     border-radius: 5px;
