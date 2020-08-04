@@ -11,6 +11,10 @@ function initMap() {
         },
         zoom: 7
     });
+
+    myDb.ref("/Facilities").once("value", (res)=>{
+        console.log(res.val())
+    })
     
 }
 

@@ -8,6 +8,8 @@ function submitFacility() {
     let announcements = document.getElementById("announcements").value;
     let contactInfo = document.getElementById("contactInfo").value;
     let website = document.getElementById("website").value;
+    let lat = document.getElementById("facilityLatitude").value;
+    let long = document.getElementById("facilityLongitude").value;
     let uid = Date.now();
 
     formObj = {
@@ -18,6 +20,8 @@ function submitFacility() {
         announcements: announcements,
         contactInfo: contactInfo,
         website: website,
+        lat: lat,
+        long: long,
         uid: uid,
     };
 
