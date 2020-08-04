@@ -25,39 +25,69 @@
             <button onClick="login()" type="submit">Login</button>
         </div>
     </div>
-<!-- If a user is logged in, you see an Event form -->
+    <!-- If a user is logged in, you see an Event form -->
     <div id="userDiv" class="loggedInDiv">
         <h1>Create New Event Form</h1>
         <form id='eventForm'>
-            <label class='eventClass' >Event Name
-                <input class="eventInputs" type="text" id="eventName"/></label>
+            <label class='eventClass'>Event Name
+                <input class="eventInputs" type="text" id="eventName" /></label>
 
-            <label class='eventClass' >Event Date
-                <input class="eventInputs" type="date" id="eventDate"/></label>
+            <label class='eventClass'>Event Date
+                <input class="eventInputs" type="date" id="eventDate" /></label>
 
             <label class='eventClass'>Event Type
-                <input class="eventInputs" type="type"  id="eventType"/></label>
+                <input class="eventInputs" type="type" id="eventType" /></label>
 
-            <label class='eventClass' >Event Time
-                <input class="eventInputs" type="time" id="eventTime"/></label>
+            <label class='eventClass'>Event Time
+                <input class="eventInputs" type="time" id="eventTime" /></label>
 
-            <label class='eventClass' >Event Description
-                <input class="eventInputs" type="text"  id="eventDesc"/></label>
+            <label class='eventClass'>Event Description
+                <input class="eventInputs" type="text" id="eventDesc" /></label>
 
-            <label class='eventClass' >Event Location
+            <label class='eventClass'>Event Location
                 <input class="eventInputs" type='text' id="eventLoc" /></label>
 
-            <label class='eventClass' >Event Covid Status
-                <input class="eventInputs" type='text'id="eventStatus" /></label>
+            <label class='eventClass'>Event Covid Status
+                <input class="eventInputs" type='text' id="eventStatus" /></label>
 
-            <label class='eventClass' >Event Expiration
-                <input class="eventInputs" type='date'id="eventExp" /></label>
+            <label class='eventClass'>Event Expiration
+                <input class="eventInputs" type='date' id="eventExp" /></label>
 
             <div id='eventButtons'>
                 <button onClick="submitEvent()">Submit Event</button>
-                <button id='logoutButton' onClick="logout()">Logout</button>
+
             </div>
         </form>
+
+
+
+        <form id='facilitiesForm'>
+            <h1>Add A New Facility</h1>
+            <label class='facilityClass'>Facility Name</label>
+            <input class="facilityInputs" type="text" id="facilityName" /></label>
+
+            <label class='facilityClass'>Facility Type
+            <input class="facilityInputs" type="text" id="facilityType" /></label>
+
+            <label class='facilityClass'>Activity Type</label>
+            <input class="facilityInputs" type="text" id="activityType" /></label>
+
+            <label class='facilityClass'>Location</label>
+            <input class="facilityInputs" type="text" id="location" /></label>
+
+            <label class='facilityClass'>Announcements</label>
+            <input class="facilityInputs" type="text" id="announcements" /></label>
+
+            <label class='facilityClass'>Facility Contact Info</label>
+            <input class="facilityInputs" type="text" id="contactInfo" /></label>
+
+            <label class='facilityClass'>Facility Website URL</label>
+            <input class="facilityInputs" type="text" id="website" /></label>
+
+            <button onClick="submitFacility()">Submit Facility</button>
+        </form>
+        
+        <button id='logoutButton' onClick="logout()">Logout</button>
     </div>
 
     <script src="https://www.gstatic.com/firebasejs/7.17.1/firebase-app.js"></script>
@@ -66,6 +96,7 @@
     <script src="./scripts/firebase.js"></script>
     <script src="./scripts/login.js"></script>
     <script src="./scripts/eventForm.js"></script>
+    <script src="./scripts/facilityForm.js"></script>
 </body>
 
 </html>

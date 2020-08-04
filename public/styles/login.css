@@ -79,3 +79,9 @@ h1 {
     width:27vw;
     padding-top: 5vh;
 }
+
+#facilitiesForm {
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+}

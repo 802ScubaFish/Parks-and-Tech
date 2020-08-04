@@ -31,7 +31,6 @@ function login() {
         
       });
 
-    
 }
 
 function logout() {
