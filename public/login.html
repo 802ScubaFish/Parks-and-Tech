@@ -14,7 +14,7 @@
     <div id="loginDiv" class="mainDiv">
         <h1>Welcome, please login</h1>
 
-        <div class="login-container">
+        <div class="logInContainer">
             <!-- <label id="name" for="name"><b>Username</b></label> -->
             <input id='emailField' class="loginField" type="text" placeholder="Enter Username" name="name" required>
 
@@ -25,6 +25,7 @@
             <button onClick="login()" type="submit">Login</button>
         </div>
     </div>
+
     <!-- If a user is logged in, you see an Event form -->
     <div id="userDiv" class="loggedInDiv">
         <h1>Create New Event Form</h1>
@@ -63,30 +64,32 @@
 
         <form id='facilitiesForm'>
             <h1>Add A New Facility</h1>
-            <label class='facilityClass'>Facility Name</label>
-            <input class="facilityInputs" type="text" id="facilityName" /></label>
+            <label class='facilityClass'>Facility Name
+                <input class="facilityInputs" type="text" id="facilityName" /></label>
 
             <label class='facilityClass'>Facility Type
-            <input class="facilityInputs" type="text" id="facilityType" /></label>
+                <input class="facilityInputs" type="text" id="facilityType" /></label>
 
-            <label class='facilityClass'>Activity Type</label>
-            <input class="facilityInputs" type="text" id="activityType" /></label>
+            <label class='facilityClass'>Activity Type
+                <input class="facilityInputs" type="text" id="activityType" /></label>
 
-            <label class='facilityClass'>Location</label>
-            <input class="facilityInputs" type="text" id="location" /></label>
+            <label class='facilityClass'>Location
+                <input class="facilityInputs" type="text" id="location" /></label>
 
-            <label class='facilityClass'>Announcements</label>
-            <input class="facilityInputs" type="text" id="announcements" /></label>
+            <label class='facilityClass'>Announcements
+                <input class="facilityInputs" type="text" id="announcements" /></label>
 
-            <label class='facilityClass'>Facility Contact Info</label>
-            <input class="facilityInputs" type="text" id="contactInfo" /></label>
+            <label class='facilityClass'>Facility Contact Info
+                <input class="facilityInputs" type="text" id="contactInfo" /></label>
 
-            <label class='facilityClass'>Facility Website URL</label>
-            <input class="facilityInputs" type="text" id="website" /></label>
+            <label class='facilityClass'>Facility Website URL
+                <input class="facilityInputs" type="text" id="website" /></label>
 
-            <button onClick="submitFacility()">Submit Facility</button>
+            <div id='facilityButtons'>
+                <button onClick="submitFacility()">Submit Facility</button>
+            </div>
         </form>
-        
+
         <button id='logoutButton' onClick="logout()">Logout</button>
     </div>
 
