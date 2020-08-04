@@ -9,12 +9,12 @@ input, button {
 }
 
 
-.login-field {
+.logInField {
      font-size: 120%;
 }
 
 
-.loggedin-div {
+.loggedInDiv {
     width: 30%;
     margin: 0px auto;
     margin-top: 150px;
@@ -28,7 +28,7 @@ h1 {
 }
 
 
-.login-container {
+.logInContainer {
     display: flex;
     flex-direction: column;
     justify-content: center;
@@ -38,14 +38,14 @@ h1 {
 }
 
 
-#event-form {
+#eventForm {
     display: flex;
     flex-direction: column;
     justify-content: space-between;
 }
 
 
-.main-div input {
+.mainDiv input {
     display: block;
     border: 1px solid #ccc;
     border-radius: 5px;
@@ -67,7 +67,7 @@ h1 {
 }
 
 
-.event-inputs {
+.eventInputs {
     width: 11.675vw;
 
 }
