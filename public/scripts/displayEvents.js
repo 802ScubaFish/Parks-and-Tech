@@ -27,18 +27,23 @@ myDb.ref("/Events").once("value", (res) => {
 
     for (const objectId in object) {
 
-        let eventNames = `Name: ${object[objectId]["eventName"]}`
-        let eventDesc = `Desc: ${object[objectId]['eventDesc']}`
-        let eventDate = `Date: ${object[objectId]['eventDate']}`
-        let eventStatus = `Status: ${object[objectId]['eventStatus']}`
-        let eventTime = `Time: ${object[objectId]['eventTime']}`
-        let eventLoc = `Location: ${object[objectId]['eventLoc']}`
+        let singleContainer = document.createElement(`ul`)
+        singleContainer.classList.add("singleEventContainer")
 
-        eventDisplay.innerHTML += eventNames
-        eventDisplay.innerHTML += eventDesc
-        eventDisplay.innerHTML += eventDate
-        eventDisplay.innerHTML += eventStatus
-        eventDisplay.innerHTML += eventTime
-        eventDisplay.innerHTML += eventLoc
+        let eventNames = `<div class="eventName">Name: ${object[objectId]["eventName"]}</div>`
+        let eventDesc = `<div>Desc: ${object[objectId]['eventDesc']}</div>`
+        let eventDate = `<div>Date: ${object[objectId]['eventDate']}</div>`
+        let eventStatus = `<div>Status: ${object[objectId]['eventStatus']}</div>`
+        let eventTime = `<div>Time: ${object[objectId]['eventTime']}</div>`
+        let eventLoc = `<div>Location: ${object[objectId]['eventLoc']}</div>`
+
+        singleContainer.innerHTML += eventNames
+        singleContainer.innerHTML += eventDesc
+        singleContainer.innerHTML += eventDate
+        singleContainer.innerHTML += eventStatus
+        singleContainer.innerHTML += eventTime
+        singleContainer.innerHTML += eventLoc
+
+        eventDisplay.append(singleContainer);
     }
 });

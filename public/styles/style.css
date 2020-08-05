@@ -128,6 +128,29 @@ main {
 }
 
 /* Sets up individual event styling */
+
+.singleEventContainer {
+  /* This container is used to style all the individual event list items that are created by the 'for in loop' on dislayEvents.js */
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  border-top: 2px solid #0054a6;
+  border-bottom: 2px solid #0054a6;
+  padding-right:12vw;
+  margin: 0;
+}
+
+.eventName {
+  display: flex;
+  justify-content: center;
+  background-color:/*#f37521 */#d8d9d8; 
+  font-size: 150%;
+  width: 100vw;
+  padding: 5%;
+  margin-top: 0;
+}
+
 .eventTitle {
   display: flex;
   justify-content: center;
