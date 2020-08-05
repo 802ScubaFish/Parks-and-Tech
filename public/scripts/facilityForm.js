@@ -2,8 +2,8 @@ function submitFacility() {
     event.preventDefault();
 
     let facilityName = document.getElementById("facilityName").value;
-    let facilityType = document.getElementById("facilityType").value;
-    let activityType = document.getElementById("activityType").value;
+    // let facilityType = document.getElementById("facilityType").value;
+    // let activityType = document.getElementById("activityType").value;
     let location = document.getElementById("location").value;
     let announcements = document.getElementById("announcements").value;
     let contactInfo = document.getElementById("contactInfo").value;
@@ -11,17 +11,23 @@ function submitFacility() {
     let lat = document.getElementById("facilityLatitude").value;
     let long = document.getElementById("facilityLongitude").value;
     let uid = Date.now();
+    let beach = document.getElementById("beach").value;
+    console.log(beach)
+    let park = document.getElementById("park").value;
 
+    
     formObj = {
         facilityName: facilityName,
-        facilityType: facilityType,
-        activityType: activityType,
+        // facilityType: facilityType,
+        // activityType: activityType,
         location: location,
         announcements: announcements,
         contactInfo: contactInfo,
         website: website,
         lat: lat,
         long: long,
+        beach: beach,
+        park: park,
         uid: uid,
     };
 
