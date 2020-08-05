@@ -52,6 +52,17 @@ a {
   */
 }
 
+#adminLogIn {
+  background-color: #0db8d3;
+  text-align: end;
+  text-decoration: none;
+  color: white;
+}
+
+.adminLogIn {
+  color: white;
+}
+
 /* Nav Bar Main Logo */
 #logo {
   height: 75px;
@@ -63,7 +74,7 @@ a {
   border-radius: 50%;
 }
 
-/* Hamburger Menu */
+/* Hamburger Menu 
 .menuButton {
   position: relative;
   display: flex;
@@ -76,9 +87,9 @@ a {
   margin-top: 5%;
   margin-bottom: 5%;
   margin-right: 5%;
-}
+} */
 
-/* Adds middle burger line  */
+/* Adds middle burger line  
 .burgerMenuButton {
   width: 50px;
   height: 6px;
@@ -86,9 +97,10 @@ a {
   border-radius: 5px;
   box-shadow: 0 2px 5px rgba(255, 101, 47, 0.2);
   transition: all 0.5s ease-in-out;
-}
+  float: right;
+} */
 
-/* Creates the other hamburger menu lines */
+/* Creates the other hamburger menu lines 
 .burgerMenuButton::before,
 .burgerMenuButton::after {
   content: "";
@@ -99,14 +111,14 @@ a {
   border-radius: 5px;
   box-shadow: 0 2px 5px rgba(255, 101, 47, 0.2);
   transition: all 0.5s ease-in-out;
-}
+} */
 
-.burgerMenuButton::before {
+/* .burgerMenuButton::before {
   transform: translateY(-16px);
 }
 .burgerMenuButton::after {
   transform: translateY(16px);
-}
+} */
 
 
 
