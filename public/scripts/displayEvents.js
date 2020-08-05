@@ -30,7 +30,7 @@ myDb.ref("/Events").once("value", (res) => {
         let singleContainer = document.createElement(`ul`)
         singleContainer.classList.add("singleEventContainer")
 
-        let eventNames = `<div class="eventName">Name: ${object[objectId]["eventName"]}</div>`
+        let eventNames = `<div class="eventName">${object[objectId]["eventName"]}</div>`
         let eventDesc = `<div>Desc: ${object[objectId]['eventDesc']}</div>`
         let eventDate = `<div>Date: ${object[objectId]['eventDate']}</div>`
         let eventStatus = `<div>Status: ${object[objectId]['eventStatus']}</div>`
