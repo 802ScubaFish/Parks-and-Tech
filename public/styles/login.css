@@ -124,6 +124,10 @@ h1 {
     width: 11.675vw;
 }
 
+#check-facilities{
+    font-size: 4vh;
+    
+}
 #facilityButtons {
     display: flex;
     justify-content: space-around;
