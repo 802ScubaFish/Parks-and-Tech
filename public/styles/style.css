@@ -33,19 +33,19 @@ a {
   background-color: #0db8d3;
   height: 18%;
   width: 100%;
-  padding-top: 4vh ;
+  padding-top: 4vh;
 }
 
-#title{
+#title {
   font-size: 7vw;
   text-align: center;
-  
+
 }
 
 /* Might use this later for a donate button. Thinking to put the donate in the dropdown*/
 
 .donateButton {
-  background-color: #2ac194;
+  background-color: #EA4335;
   border: 1px solid gray;
   margin-top: 30%;
   margin-left: 50%;
@@ -136,6 +136,39 @@ main {
   width: 100%;
   padding-top: 20px;
 }
+
+/* Search Bar Styling */
+#searchBar {
+  display: flex;
+  flex-direction: row;
+  width: 50%;
+  margin: auto;
+  text-align: center;
+  margin-bottom: -5%;
+}
+
+#searchTitle {
+  padding-right: 5%;
+}
+
+#searchButtons {
+  display: flex;
+  flex-direction: row;
+  justify-content: center ;
+  align-items: center;
+}
+
+#searchEvents,
+#searchFacilities {
+  height: 25%;
+  background-color:#EA4335;
+  border: none;
+  border-radius: 30%;
+  font-size: 90%;
+  margin: 1vw;
+}
+
+
 /* Sets the map explicitely */
 #map {
   margin: auto;
@@ -157,14 +190,16 @@ main {
   align-items: center;
   border-top: 2px solid #0054a6;
   border-bottom: 2px solid #0054a6;
-  padding-right:12vw;
+  padding-right: 12vw;
   margin: 0;
 }
 
 .eventName {
   display: flex;
   justify-content: center;
-  background-color:/*#f37521 */#d8d9d8; 
+  background-color:
+    /*#f37521 */
+    #d8d9d8;
   font-size: 150%;
   width: 100vw;
   padding: 5%;
@@ -174,7 +209,9 @@ main {
 .eventTitle {
   display: flex;
   justify-content: center;
-  background-color:/*#f37521 */#d8d9d8; 
+  background-color:
+    /*#f37521 */
+    #d8d9d8;
   width: 100%;
   padding: 5%;
   margin-top: 0;
