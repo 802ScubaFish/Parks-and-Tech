@@ -71,17 +71,18 @@
         </form>
     </div>
 
+    <!-- Add a facility form  -->
     <div id='wholeFacilityForm'>
         <form id='facilitiesForm'>
             <h1>Add A New Facility</h1>
             <label class='facilityClass'>Facility Name
-                <input class="facilityInputs" type="text" id="facilityName" /></label>
+                <input class="facilityInputs" type="text" id="facilityName" value="facilitiesName" /></label>
 
-            <label class='facilityClass'>Facility Type
+            <!-- <label class='facilityClass'>Facility Type
                 <input class="facilityInputs" type="text" id="facilityType" /></label>
 
             <label class='facilityClass'>Activity Type
-                <input class="facilityInputs" type="text" id="activityType" /></label>
+                <input class="facilityInputs" type="text" id="activityType" /></label> -->
 
             <label class='facilityClass'>Location
                 <input class="facilityInputs" type="text" id="location" /></label>
@@ -103,6 +104,31 @@
             <div id="latLngButon">
                 <a href="https://nominatim.openstreetmap.org/ui/search.html"> Find your Lat and Long</a>
             </div>
+
+            <div id="check-facilities">Check to Select Park Features
+
+            </div>
+            <!-- Check to Select Park Features Checkboxes -->
+            <input type="checkbox" id="beach" name="facilityFeature" />
+            <label for="beach">Beach</label>
+            <input type="checkbox" id="park" name="facilityFeature" />
+            <label for="park">Park</label>
+            <input type="checkbox" id="playground" name="facilityFeature" />
+            <label for="playground">Playground</label>
+            <input type="checkbox" id="dogPark" name="facilityFeature" />
+            <label for="dogPark">Dog Park</label>
+            <input type="checkbox" id="biking" name="facilityFeature" />
+            <label for="biking">Biking</label>
+            <input type="checkbox" id="hiking" name="facilityFeature" />
+            <label for="hiking">Hiking</label>
+            <input type="checkbox" id="basketball" name="facilityFeature" />
+            <label for="basketball">Basketball Courts</label>
+            <input type="checkbox" id="fields" name="facilityFeature" />
+            <label for="fields">Athletic Fields</label>
+
+
+
+
             <div id='facilityButtons'>
                 <button onClick="submitFacility()">Submit Facility</button>
             </div>

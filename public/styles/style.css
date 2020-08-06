@@ -28,10 +28,18 @@ a {
 
 #topBanner {
   display: flex;
-  justify-content: space-between;
+  flex-direction: row;
+  justify-content: space-evenly;
   background-color: #0db8d3;
   height: 18%;
   width: 100%;
+  padding-top: 4vh ;
+}
+
+#title{
+  font-size: 7vw;
+  text-align: center;
+  
 }
 
 /* Might use this later for a donate button. Thinking to put the donate in the dropdown*/
