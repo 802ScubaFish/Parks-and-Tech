@@ -20,7 +20,7 @@ function initMap() {
 
     for (const objectId in object) {
         var myLatLng = {lat :parseFloat(object[objectId]["lat"]), lng: parseFloat(object[objectId]["long"])};
-        console.log(myLatLng)
+        
       
       var marker = new google.maps.Marker({
         position: myLatLng,
