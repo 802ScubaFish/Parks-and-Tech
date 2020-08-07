@@ -35,7 +35,7 @@
     <div id="topBanner">
       <a href="https://www.vrpa.org/"><img id='logo' src="/imgs/VRPA_logo_color.jpg" alt="VRPA logo"></a>
       <div id="navDonateButton">
-      <div id = "title" >Seek and go Park</div>
+        <div id="title">Seek and go Park</div>
       </div>
       <!-- Hamburger Menu 
       <div class="nav-toggle">
@@ -46,103 +46,86 @@
         
         <div class="burgerMenuButton"> -->
 
-          <!-- <div id="hiddenLinks">
+      <!-- <div id="hiddenLinks">
             <a href="#events">Events</a>
             <a href="#municipalities">Municipalities</a>
             <a href="#login">Login</a> 
           </div> -->
 
-        </div>
+    </div>
 
-      </nav>
+    </nav>
 
-        
+
+  </div>
+  </div>
+
+  <div id='searchBar'>
+    <h4 id='searchTitle'>Search By:</h4>
+    <div id='searchButtons'>
+      <button id='searchEvents'>Events</button>
+      <button id='searchFacilities'>Facilities</button>
     </div>
   </div>
 
+  
   <!--Map Content-->
   <main>
     <div id="map"></div>
 
-    
-     <div id='eventsList'>
+
+    <div id='eventsList'>
       <h2 id='eventHead'>Upcoming Events</h2>
       <br />
       <div id='displayEvent'></div>
 
-      <!-- Events. Each Event has a title and a description. These are all placeholders. This is currently commeted out as we now have working code for the Events section, WOOOOO!!!  -->
-      <!--
-      <div class='singleEvent'>
-        <h3 class='eventTitle'>Event Example Place Holder</h3>
-        <h4 class='eventDesc'>Placeholder text. Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod
-          tempor incididunt ut
-          labore et dolore magna aliqua.</h4>
-      </div>
-      <div class='singleEvent'>
-        <h3 class='eventTitle'>Event Example Place Holder</h3>
-        <h4 class='eventDesc'>Placeholder text. Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod
-          tempor incididunt ut
-          labore et dolore magna aliqua.</h4>
-      </div>
-      <div class='singleEvent'>
-        <h3 class='eventTitle'>Event Example Place Holder</h3>
-        <h4 class='eventDesc'>Placeholder text. Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod
-          tempor incididunt ut
-          labore et dolore magna aliqua.</h4>
-      </div>
-      <div class='singleEvent'>
-        <h3 class='eventTitle'>Event Example Place Holder</h3>
-        <h4 class='eventDesc'>Placeholder text. Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod
-          tempor incididunt ut
-          labore et dolore magna aliqua.</h4>
-      </div>
-    </div> -->
 
+      <!-- Mission Statement of VRPA -->
+      <div id='missStatement'>
+        <h4 id='missTitle'>VRPA Mission</h4>
+        <h5>The mission of the Vermont Recreation and Parks Association is to provide training and resources to help
+          Vermonters to"Create Community through People, Parks and Programs."</h5>
+      </div>
+      <div id='whiteSpace'></div>
+      <div id="footer">
 
-    <!-- Mission Statement of VRPA -->
-    <div id='missStatement'>
-      <h4 id='missTitle'>VRPA Mission</h4>
-      <h5>The mission of the Vermont Recreation and Parks Association is to provide training and resources to help
-        Vermonters to"Create Community through People, Parks and Programs."</h5>
-    </div>
-    <div id='whiteSpace'></div>
-    <div id="footer">
+        <!-- Footer -->
+        <div id='footerRow'>
 
-      <!-- Footer -->
-      <div id='footerRow'>
+          <div id='footerLogo'>
+            <a href="https://www.vrpa.org/"><img id='logo' src="/imgs/VRPA_logo_color.jpg" alt="VRPA logo"></a>
+          </div>
 
-        <div id='footerLogo'>
-          <a href="https://www.vrpa.org/"><img id='logo' src="/imgs/VRPA_logo_color.jpg" alt="VRPA logo"></a>
+          <div id='contactInfo'>
+            <h3>
+              Jessica Brodie
+              <br>
+              Executive Director
+              <br>
+              P.O. Box 33
+              <br>
+              Brownsville, VT 05037
+              <br>
+              802-952-0030
+              <br>
+              http://www.vrpa.org
+              info@vrpa.org
+            </h3>
+          </div>
+
         </div>
-
-        <div id='contactInfo'>
-          <h3>
-            Jessica Brodie
-            <br>
-            Executive Director
-            <br>
-            P.O. Box 33
-            <br>
-            Brownsville, VT 05037
-            <br>
-            802-952-0030
-            <br>
-            http://www.vrpa.org
-            info@vrpa.org
-          </h3>
-        </div>
-
       </div>
-    </div>
   </main>
+
   <!-- Connects to Javascript files -->
   <script src="https://www.gstatic.com/firebasejs/7.17.1/firebase-app.js"></script>
-    <script src="https://www.gstatic.com/firebasejs/7.17.1/firebase-auth.js"></script>
-    <script src="https://www.gstatic.com/firebasejs/7.17.1/firebase-database.js"></script>
+  <script src="https://www.gstatic.com/firebasejs/7.17.1/firebase-auth.js"></script>
+  <script src="https://www.gstatic.com/firebasejs/7.17.1/firebase-database.js"></script>
   <script src='/scripts/firebase.js'></script>
   <script src='/scripts/index.js'></script>
   <script src='/scripts/mapSetup.js'></script>
   <script src='/scripts/displayEvents.js'></script>
+  <script src='/scripts/eventExpiration.js'></script>
 
 </body>
 

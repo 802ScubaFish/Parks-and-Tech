@@ -16,11 +16,11 @@ function initMap() {
 //Grabs the lat and lng from the database. Adds all facilities to map. 
   myDb.ref("/Facilities").once("value", (res) => {
     const object = res.val();
-    console.log(res.val())
+    // console.log(res.val())
 
     for (const objectId in object) {
         var myLatLng = {lat :parseFloat(object[objectId]["lat"]), lng: parseFloat(object[objectId]["long"])};
-        console.log(myLatLng)
+        
       
       var marker = new google.maps.Marker({
         position: myLatLng,
