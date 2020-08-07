@@ -8,23 +8,55 @@ body {
   font-family: 'Montserrat', sans-serif;
 }
 
+/*  Buttons */
+.styledButtons{
+  display:inline-block;
+  padding:0.5em 3em;
+  border:0.16em solid #FFFFFF;
+  margin:0 0.3em 0.3em 0;
+  box-sizing: border-box;
+  text-decoration:none;
+  text-transform:uppercase;
+  font-family:'Roboto',sans-serif;
+  font-weight:400;
+  background-color: #68c88d;
+  color:white;
+  text-align:center;
+  transition: all 0.15s;
+  }
+  .styledButtons:hover{
+  color:#DDDDDD;
+  border-color:#DDDDDD;
+  }
+  .styledButton:active{
+  color:#BBBBBB;
+  border-color:#BBBBBB;
+  }
+
 /* Donate span */
 #span {
   background-color: #68c88d;
   display: flex;
   justify-content: center;
+  align-items: center;
   width: 100%;
-  font-size: 120%;
-  color: #2ac194;
-  text-shadow: 1px 1px black;
+  height:5%;
+  font-size: 125%;
+  /* text-shadow: 1px 1px rgb(224, 224, 224); */
 }
 
 a {
   text-decoration: none;
-  color: #0054a6;
+  color: white;
 }
 
 /* Banner and Nav Bar */
+#navBar{
+  display: flex;
+  flex-direction: row-reverse;
+
+}
+
 
 #topBanner {
   display: flex;
@@ -37,9 +69,9 @@ a {
 }
 
 #title {
-  font-size: 7vw;
+  font-size: 6vw;
   text-align: center;
-
+  color: black;
 }
 
 /* Might use this later for a donate button. Thinking to put the donate in the dropdown*/
@@ -49,15 +81,6 @@ a {
   border: 1px solid gray;
   margin-top: 30%;
   margin-left: 50%;
-
-  /*height: 50px;
-  width: 100px;
-  color: white;
-  display: flex;
-  justify-content: center;
-  border-radius: 35%;
-  padding: 5px 15px;
-  */
 }
 
 #adminLogIn {
@@ -65,6 +88,8 @@ a {
   text-align: end;
   text-decoration: none;
   color: white;
+  width: 200px;
+  padding-right: 1vw;
 }
 
 .adminLogIn {
@@ -76,9 +101,9 @@ a {
   height: 75px;
   width: 75px;
   display: flex;
-  margin-top: 25%;
-  margin-bottom: 10%;
-  margin-left: 20%;
+  /* margin-top: 10vw; */
+  margin-bottom: 10vw;
+  margin-left: 15vw;
   border-radius: 50%;
 }
 
@@ -139,12 +164,14 @@ main {
 
 /* Search Bar Styling */
 #searchBar {
+  background-color: lightgray;
   display: flex;
   flex-direction: row;
-  width: 50%;
+  justify-content: center;
+  width: 100%;
   margin: auto;
   text-align: center;
-  margin-bottom: -5%;
+  margin: auto
 }
 
 #searchTitle {
@@ -156,16 +183,6 @@ main {
   flex-direction: row;
   justify-content: center ;
   align-items: center;
-}
-
-#searchEvents,
-#searchFacilities {
-  height: 25%;
-  background-color:#EA4335;
-  border: none;
-  border-radius: 30%;
-  font-size: 90%;
-  margin: 1vw;
 }
 
 
@@ -181,7 +198,6 @@ main {
 }
 
 /* Sets up individual event styling */
-
 .singleEventContainer {
   /* This container is used to style all the individual event list items that are created by the 'for in loop' on dislayEvents.js */
   display: flex;
@@ -233,18 +249,11 @@ main {
   margin-top: 6%;
 }
 
-.singleEvent {
-  display: flex;
-  flex-direction: column;
-  justify-content: center;
-  align-items: center;
-  border-top: 1px solid #0054a6;
-  border-bottom: 1px solid #0054a6;
-}
 
 .eventDesc {
   padding-left: 5%;
 }
+
 
 /* Mission Statement Styling Here */
 #missStatement {
@@ -253,15 +262,23 @@ main {
   align-items: center;
   flex-direction: column;
   background-color: #2ac194;
+  border-top: 2px solid #0054a6;
+  border-bottom: 4px solid #0054a6;
+  
 }
+
+#missStatement h5{
+  margin-left: 5vw;
+  margin-right: 5vw;
+  
+}
+
 
 #missTitle {
   margin-bottom: -5%;
+  font-size: 150%;
 }
 
-#whiteSpace {
-  height: 10px;
-}
 
 /* Styling for Footer Section Here */
 #footer {
@@ -272,6 +289,7 @@ main {
   width: 100%;
 }
 
+
 #footerRow {
   display: flex;
   flex-direction: row;
@@ -279,14 +297,47 @@ main {
   align-items: center;
 }
 
+
 #footerLogo {
   display: flex;
   justify-content: center;
 }
+
 
 #contactInfo {
   display: flex;
   justify-content: center;
   margin-left: 27%;
   font-size: 90%;
+}
+
+
+/* At a desktop size */
+@media screen and (min-width: 700px) {
+
+  #logo {
+   margin-bottom: 4vw;
+  }
+
+  #missTitle{
+    margin-bottom: 1vh;
+    
+  }
+
+  #adminLogIn{
+    width: 60px
+  }
+
+}
+
+/* At a phone size */
+@media screen and (max-width: 750px) {
+
+  #searchButtons {
+    display: flex;
+    flex-direction: column;
+    width: 100vw;
+    margin-top:1%;
+  }
+
 }

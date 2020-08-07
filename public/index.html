@@ -11,7 +11,7 @@
   <link rel="icon" type="image/png" sizes="32x32" href="/favicon-32x32.png">
   <link rel="icon" type="image/png" sizes="16x16" href="/favicon-16x16.png">
   <link rel="manifest" href="/site.webmanifest">
-  
+
   <!-- Adds google maps polyfill-->
   <script src="https://polyfill.io/v3/polyfill.min.js?features=default"></script>
   <link rel="stylesheet" href="/styles/style.css">
@@ -26,17 +26,20 @@
 
 <body>
   <!--Donate Bar-->
-  <div id="span"><a href="https://www.vrpa.org/Sys/Error/404">Donate</a></div>
-  <div id="adminLogIn">
-    <a class="adminLogIn" href="/login.html">Admin Log In</a>
-  </div>
-  <!--Header-->
+  <div id="span"><a href="https://www.vrpa.org/Sys/Error/404"><b>DONATE</b></a></div>
   <div id="navBar">
+    <div id="adminLogIn">
+      <a class="adminLogIn" href="/login.html">
+        Admin Log In</a>
+    </div>
+
+    <!--Header-->
     <div id="topBanner">
       <a href="https://www.vrpa.org/"><img id='logo' src="/imgs/VRPA_logo_color.jpg" alt="VRPA logo"></a>
       <div id="navDonateButton">
-        <div id="title">Seek and go Park</div>
+        <div id="title">PICK YOUR PARK!</div>
       </div>
+
       <!-- Hamburger Menu 
       <div class="nav-toggle">
         <div class="nav-toggle-bar"></div>
@@ -63,12 +66,12 @@
   <div id='searchBar'>
     <h4 id='searchTitle'>Search By:</h4>
     <div id='searchButtons'>
-      <button id='searchEvents'>Events</button>
-      <button id='searchFacilities'>Facilities</button>
+      <button class='styledButtons' id='searchEvents'>Events</button>
+      <button class='styledButtons' id='searchFacilities'>Facilities</button>
     </div>
   </div>
 
-  
+
   <!--Map Content-->
   <main>
     <div id="map"></div>

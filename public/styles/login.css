@@ -3,28 +3,51 @@ body {
     font-family: 'Montserrat', sans-serif;
 }
 
-input,
-button {
-    font-family: 'Nunito', sans-serif;
-    font-weight: 700;
-}
-
+/*  Buttons */
+.styledButtons{
+    display:inline-block;
+    padding:0.5em 3em;
+    border:0.16em solid #FFFFFF;
+    margin:0 0.3em 0.3em 0;
+    box-sizing: border-box;
+    text-decoration:none;
+    text-transform:uppercase;
+    font-family:'Roboto',sans-serif;
+    font-weight:400;
+    background-color: #68c88d;
+    color:white;
+    text-align:center;
+    transition: all 0.15s;
+    }
+    .styledButtons:hover{
+    color:#93d8ae;
+    border-color:#DDDDDD;
+    }
+    .styledButton:active{
+    color:#225d39;
+    border-color:#BBBBBB;
+    }
 
 .logInField {
     font-size: 120%;
 }
 
 .loggedInDiv {
-    width: 40%;
+    width: 100%;
     margin: auto;
     margin-top: 150px;
+    justify-self: center;
     display: none;
     flex-direction: column;
 }
 
 #logInButtons {
-    width:50%;
+    width:100%;
+    justify-content: center;
     margin: auto;
+    display: flex;
+    flex-direction: row;
+
 }
 
 #logo {
@@ -42,19 +65,20 @@ h1 {
     text-align: center;
 }
 
-
+  
 .logInContainer {
     display: flex;
     flex-direction: column;
     justify-content: center;
     align-items: center;
-    width: 30vw;
+    width: 50%;
     margin: auto;
 }
 
+
  #wholeEventForm{
     display: none;
-    width: 30vw;
+    width: 50vw;
     margin: auto
 } 
 
@@ -81,6 +105,7 @@ h1 {
     text-align: center;
 }
 
+
 .eventClass {
     display: flex;
     justify-content: space-between;
@@ -94,18 +119,12 @@ h1 {
 }
 
 
-#eventButtons {
-    display: flex;
-    justify-content: space-around;
-    width: 27vw;
-    padding-top: 5vh;
-}
-
 #wholeFacilityForm {
     display: none;
-    width: 30vw;
-    margin: auto
+    width: 50vw;
+    margin: auto;
 } 
+
 
 #facilitiesForm {
     display: flex;
@@ -114,23 +133,27 @@ h1 {
     padding-right: 10%;
 }
 
+
 .facilityClass {
     display: flex;
     justify-content: space-between;
     margin: 1vh;
 }
 
+
 .facilityInputs {
     width: 11.675vw;
 }
+
 
 #check-facilities{
     font-size: 4vh;
     
 }
+
+
 #facilityButtons {
     display: flex;
-    justify-content: space-around;
-    width: 27vw;
-    padding-top: 5vh;
+    justify-content: center;
+    width: 100%;
 }

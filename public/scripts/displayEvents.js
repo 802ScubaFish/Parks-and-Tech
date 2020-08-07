@@ -45,11 +45,11 @@ myDb.ref("/Events").once("value", (res) => {
 
         // Each of the event list items variables
         let eventNames = `<div class="eventName">${object[objectId]["eventName"]}</div>` //we added a class to each event name on this line so we can target them with css styling.
-        let eventDesc = `<div>Desc: ${object[objectId]['eventDesc']}</div>`
+        let eventDesc = `<div>${object[objectId]['eventDesc']}</div>`
         let eventDate = `<div>Date: ${object[objectId]['eventDate']}</div>`
-        let eventStatus = `<div>Status: ${object[objectId]['eventStatus']}</div>`
-        let eventTime = `<div>Time: ${object[objectId]['eventTime']}</div>`
-        let eventLoc = `<div>Location: ${object[objectId]['eventLoc']}</div>`
+        let eventStatus = `<div>Covid Status: ${object[objectId]['eventStatus']}</div>`
+        let eventTime = `<div>Event Time: ${object[objectId]['eventTime']}</div>`
+        let eventLoc = `<div>Event Location: ${object[objectId]['eventLoc']}</div>`
 
         // Append each event item to the singleContainer un-ordered list element
         singleContainer.innerHTML += eventNames
