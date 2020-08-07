@@ -33,16 +33,16 @@ function initMap() {
   });
 }
 
-//Hamburger Animation
-const menuButton = document.querySelector(".menuButton");
-let menuIsOpen = false;
-menuButton.addEventListener("click", () => {
-  console.log("This is clicked");
-  if (!menuIsOpen) {
-    menuButton.classList.add("open");
-    menuIsOpen = true;
-  } else {
-    menuButton.classList.remove("open");
-    menuIsOpen = false;
-  }
-});
+// //Hamburger Animation
+// const menuButton = document.querySelector(".menuButton");
+// let menuIsOpen = false;
+// menuButton.addEventListener("click", () => {
+//   console.log("This is clicked");
+//   if (!menuIsOpen) {
+//     menuButton.classList.add("open");
+//     menuIsOpen = true;
+//   } else {
+//     menuButton.classList.remove("open");
+//     menuIsOpen = false;
+//   }
+// });
