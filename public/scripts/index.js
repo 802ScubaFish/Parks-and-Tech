@@ -62,7 +62,7 @@ function createPin(place, coords) {
 }
 
 
-//Hamburger Animation
+// //Hamburger Animation
 // const menuButton = document.querySelector(".menuButton");
 // let menuIsOpen = false;
 // menuButton.addEventListener("click", () => {
