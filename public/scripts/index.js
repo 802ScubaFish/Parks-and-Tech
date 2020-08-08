@@ -58,6 +58,7 @@ function createPin(place, coords) {
       })
 
       marker.setMap(map);
+     
 
 }
 
