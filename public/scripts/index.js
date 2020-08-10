@@ -30,6 +30,8 @@ function initMap() {
 
   });
 }
+
+
 // creates infoWindow content for marker and places marker on map
 function createPin(place, coords) {
 
