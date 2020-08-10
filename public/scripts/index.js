@@ -49,7 +49,7 @@ function createPin(place, coords) {
       console.log(coords)
 
       //allows links to pop up when hovered over and disappear when user moves mouse to another pin
-      marker.addListener("mouseover", function () {
+      marker.addListener("click", function () {
         if(activeInfoWindow) {
           activeInfoWindow.close()
         }
