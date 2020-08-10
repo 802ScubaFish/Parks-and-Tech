@@ -40,7 +40,7 @@ myDb.ref("/Events").once("value", (res) => {
     for (const objectId in object) {
 
         // sets up the main container for all the event list items
-        let singleContainer = document.createElement(`ul`)
+        let singleContainer = document.createElement(`div`)
         singleContainer.classList.add("singleEventContainer") //this line adds a class to each of the events so we can target them with css styling
 
         // Each of the event list items variables

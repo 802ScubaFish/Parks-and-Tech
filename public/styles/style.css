@@ -217,7 +217,6 @@ main {
   align-items: center;
   border-top: 2px solid #0054a6;
   border-bottom: 2px solid #0054a6;
-  padding-right: 12vw;
   margin: 0;
 }
 
@@ -320,6 +319,11 @@ main {
   justify-content: center;
   margin-left: 27%;
   font-size: 90%;
+}
+
+.footerLinks {
+  text-decoration: none;
+  color: black;
 }
 
 
