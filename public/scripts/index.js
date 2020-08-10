@@ -20,11 +20,14 @@ function initMap() {
 
     for (const objectId in object) {
       var dbObj = object[objectId]
-      var myLatLng = { lat: parseFloat(dbObj["lat"]), lng: parseFloat(dbObj["long"]) };
-      
+      var myLatLng = {
+        lat: parseFloat(dbObj["lat"]),
+        lng: parseFloat(dbObj["long"])
+      };
+
       //only creates pins for facilities with lat and long entered
-      if(myLatLng.lat != "" || myLatLng.long != ""){
-        createPin(dbObj,myLatLng)
+      if (myLatLng.lat != "" || myLatLng.long != "") {
+        createPin(dbObj, myLatLng)
       }
     }
 
@@ -37,44 +40,57 @@ function createPin(place, coords) {
 
   //allows name of facility to act as link
   let pinContent =
-        `<div class= "pin-info"><a href = '${place["website"]}'>${place["facilityName"]}</a>`
-      
-      //uses google's established constructor for infoWindown
-      var infoWindow = new google.maps.InfoWindow({
-        content: pinContent
-      })
-      //places marker on map
-      var marker = new google.maps.Marker({
-        position: coords,
+    `<div class= "pin-info"><a href = '${place["website"]}'>${place["facilityName"]}</a>`
 
-      });
-      // console.log(coords)
+  //uses google's established constructor for infoWindown
+  var infoWindow = new google.maps.InfoWindow({
+    content: pinContent
+  })
+  //places marker on map
+  var marker = new google.maps.Marker({
+    position: coords,
 
-      //allows links to pop up when hovered over and disappear when user moves mouse to another pin
-      marker.addListener("click", function () {
-        if(activeInfoWindow) {
-          activeInfoWindow.close()
-        }
-        infoWindow.open(map, marker)
-        activeInfoWindow = infoWindow
-      })
+  });
+  // console.log(coords)
 
-      marker.setMap(map);
-     
+  //allows links to pop up when hovered over and disappear when user moves mouse to another pin
+  marker.addListener("click", function () {
+    if (activeInfoWindow) {
+      activeInfoWindow.close()
+    }
+    infoWindow.open(map, marker)
+    activeInfoWindow = infoWindow
+  })
+
+  marker.setMap(map);
+
 
 }
 
+function eventsFilter() {
 
-// //Hamburger Animation
-// const menuButton = document.querySelector(".menuButton");
-// let menuIsOpen = false;
-// menuButton.addEventListener("click", () => {
-//   console.log("This is clicked");
-//   if (!menuIsOpen) {
-//     menuButton.classList.add("open");
-//     menuIsOpen = true;
-//   } else {
-//     menuButton.classList.remove("open");
-//     menuIsOpen = false;
-//   }
-// });
+  var eventsModal = document.getElementById("eventsModal");
+
+  if (!eventsModal.style.display) {
+    eventsModal.style.display = "block";
+  } else if (eventsModal.style.display === 'none') {
+    eventsModal.style.display = "block";
+  } else {
+    eventsModal.style.display = "none";
+  }
+
+}
+
+function facilitiesFilter() {
+
+  var facilityModal = document.getElementById("facilitiesModal");
+
+  if (!facilityModal.style.display) {
+    facilityModal.style.display = "block";
+  } else if (facilityModal.style.display === 'none') {
+    facilityModal.style.display = "block";
+  } else {
+    facilityModal.style.display = "none";
+  }
+
+}

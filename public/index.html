@@ -1,4 +1,4 @@
-  <!DOCTYPE html>
+<!DOCTYPE html>
 <html>
 
 <head>
@@ -25,8 +25,81 @@
 </head>
 
 <body>
+
+  <div id='eventsModal'>
+
+    <h1>Search By Event Type!</h1>
+
+    <label class='eventModalLabels' for="sporting">Sporting
+      <input class="eventModalInputs" type="checkbox" id="sporting" name="eventFeature" /></label>
+    <br>
+    <label class='eventModalLabels' for="biking">Biking
+      <input class="eventModalInputs" type="checkbox" id="biking" name="eventFeature" /></label>
+    <br>
+    <label class='eventModalLabels' for="running">Running
+      <input class="eventModalInputs" type="checkbox" id="running" name="eventFeature" /></label>
+    <br>
+    <label class='eventModalLabels' for="swimming">Swimming
+      <input class="eventModalInputs" type="checkbox" id="swimming" name="eventFeature" /></label>
+    <br>
+    <label class='eventModalLabels' for="fairFestival">Fair / Festival
+      <input class="eventModalInputs" type="checkbox" id="fairFestival" name="eventFeature" /></label>
+    <br>
+    <label class='eventModalLabels' for="holiday">Holiday
+      <input class="eventModalInputs" type="checkbox" id="holiday" name="eventFeature" /></label>
+    <br>
+    <label class='eventModalLabels' for="youth">Youth
+      <input class="eventModalInputs" type="checkbox" id="youth" name="eventFeature" /></label>
+    <br>
+    <label class='eventModalLabels' for="adult">Adult
+      <input class="eventModalInputs" type="checkbox" id="adult" name="eventFeature" /></label>
+    <br>
+    <label class='eventModalLabels' for="senior">Senior
+      <input class="eventModalInputs" type="checkbox" id="senior" name="eventFeature" /></label>
+    <br>
+    <label class='eventModalLabels' for="outdoors">Outdoors
+      <input class="eventModalInputs" type="checkbox" id="outdoors" name="eventFeature" /></label>
+    <br>
+    <label class='eventModalLabels' for="indoors">Indoors
+      <input class="eventModalInputs" type="checkbox" id="indoors" name="eventFeature" /></label>
+    <br>
+    <label class='eventModalLabels' for="natureBased">Nature Based
+      <input class="eventModalInputs" type="checkbox" id="natureBased" name="eventFeature" /></label>
+    <br>
+    <label class='eventModalLabels' for="education">Education
+      <input class="eventModalInputs" type="checkbox" id="education" name="eventFeature" /></label>
+
+    <div>
+      <button class='styledButtons'>Search</button>
+    </div>
+  </div>
+
+  <!-- Facilities Labels for the modal -->
+  <div id="facilitiesModal">
+    <h1>Filter by Faciliity Type </h1>
+    <label class='facilityModalLabels' for="beach">Beach
+      <input class="facilityModalInputs" type="checkbox" id="beach" name="facilityFeature" /></label><br>
+    <label class='facilityModalLabels' for="park">Park
+      <input class="facilityModalInputs" type="checkbox" id="park" name="facilityFeature" /></label><br>
+    <label class='facilityModalLabels' for="playground">Playground
+      <input class="facilityModalInputs" type="checkbox" id="playground" name="facilityFeature" /></label><br>
+    <label class='facilityModalLabels' for="dogPark">Dog Park
+      <input class="facilityModalInputs" type="checkbox" id="dogPark" name="facilityFeature" /></label><br>
+    <label class='facilityModalLabels' for="biking">Biking
+      <input class="facilityModalInputs" type="checkbox" id="biking" name="facilityFeature" /></label><br>
+    <label class='facilityModalLabels' for="hiking">Hiking
+      <input class="facilityModalInputs" type="checkbox" id="hiking" name="facilityFeature" /></label><br>
+    <label class='facilityModalLabels' for="basketball">Basketball Courts
+      <input class="facilityModalInputs" type="checkbox" id="basketball" name="facilityFeature" /></label><br>
+    <label class='facilityModalLabels' for="fields">Athletic Fields
+      <input class="facilityModalInputs" type="checkbox" id="fields" name="facilityFeature" /></label><br>
+    <div>
+      <button class='styledButtons'>Search</button>
+    </div>
+  </div>
+
   <!--Donate Bar-->
-  <div id="donate"><a href="https://www.vrpa.org/Sys/Error/404"><b>DONATE</b></a></div>
+  <div id="donate"><a href="https://www.vrpa.org/donate"><b>DONATE</b></a></div>
   <div id="navBar">
     <div id="adminLogIn">
       <a class="adminLogIn" href="/login.html">
@@ -40,25 +113,9 @@
         <div id="title">PICK YOUR PARK!</div>
       </div>
 
-      <!-- Hamburger Menu 
-      <div class="nav-toggle">
-        <div class="nav-toggle-bar"></div>
-      </div>
-        
-      <nav class="menuButton">
-        
-        <div class="burgerMenuButton"> -->
-
-      <!-- <div id="hiddenLinks">
-            <a href="#events">Events</a>
-            <a href="#municipalities">Municipalities</a>
-            <a href="#login">Login</a> 
-          </div> -->
-
     </div>
 
     </nav>
-
 
   </div>
   </div>
@@ -66,10 +123,12 @@
   <div id='searchBar'>
     <h4 id='searchTitle'>Search By:</h4>
     <div id='searchButtons'>
-      <button class='styledButtons' id='searchEvents'>Events</button>
-      <button class='styledButtons' id='searchFacilities'>Facilities</button>
+      <button class='styledButtons' id='searchEvents' onClick='eventsFilter()'>Events</button>
+      <button class='styledButtons' id='searchFacilities' onClick='facilitiesFilter()'>Facilities</button>
     </div>
   </div>
+
+
 
 
   <!--Map Content-->
@@ -101,18 +160,18 @@
 
           <div id='contactInfo'>
             <h3>
-              <div >Jessica Brodie</div>
-           
+              <div>Jessica Brodie</div>
+
               <div>Executive Director</div>
-            
-             <div>P.O. Box 33</div>
-          
+
+              <div>P.O. Box 33</div>
+
               <div>Brownsville, VT 05037</div>
-            
+
               <div><a class='footerLinks' href='tel:802-952-0030'>802-952-0030</a></div>
-           
+
               <div><a class='footerLinks' href='http://www.vrpa.org'>http://www.vrpa.org</a></div>
-             
+
               <div><a class='footerLinks' href='mailto:info@vrpa.org'>info@vrpa.org</a></div>
             </h3>
           </div>

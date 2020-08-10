@@ -4,7 +4,7 @@
 let eventArray = [];
 let sortedArray = [];
 let eventDate;
-
+let displayE
 
 myDb.ref("/Events").once("value", (res) => {
 
@@ -22,9 +22,9 @@ myDb.ref("/Events").once("value", (res) => {
         // If the current date is one day past the date of any of the events we delete the event.
         if (eventDate < (Date.now() + 86400000)) {
             myDb.ref("Events/" + objectId).remove().then(function () {
-                // console.log("Document successfully deleted!");
+
             }).catch(function (error) {
-                // console.error("Error removing document: ", error);
+                alert("Error removing document: ", error);
             });
         } else {
             // Add all the objects 
@@ -41,7 +41,6 @@ myDb.ref("/Events").once("value", (res) => {
     }
 
     sortedArray.forEach((eventObj) => {
-        // eventDatesConverted = new Date(eventDate).toLocaleDateString();
 
         // Sets up the main container for all the event list items
         let singleContainer = document.createElement(`div`)
@@ -64,7 +63,7 @@ myDb.ref("/Events").once("value", (res) => {
         singleContainer.innerHTML += eventLoc
 
         // Append the single container un-ordered list with all the included list elements to the index.html doc
-        eventDisplay.append(singleContainer);
+        displayEvent.append(singleContainer);
 
     })
 });

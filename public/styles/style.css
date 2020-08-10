@@ -196,7 +196,45 @@ main {
   align-items: center;
 }
 
+#eventsModal {
+  display: none;
+  background-color: #d8d9d8;
+  height: 100vh;
+  min-width: 100vw;
+  z-index: 1000;
+  position: absolute;
+  padding-top: 1vh;
+}
 
+.eventModalLabels {
+  display: flex;
+  justify-content: space-between;
+  margin: 1vh;
+}
+
+.eventModalInputs {
+  width: 11.675vw;
+}
+
+#facilitiesModal {
+  display: none;
+  background-color: #d8d9d8;
+  height: 100vh;
+  min-width: 100vw;
+  z-index: 1000;
+  position: absolute;
+  padding-top: 1vh;
+}
+
+.facilityModalLabels {
+  display: flex;
+  justify-content: space-between;
+  margin: 1vh;
+}
+
+.facilityModalInputs {
+  width: 11.675vw;
+}
 /* Sets the map explicitely */
 #map {
   margin: auto;

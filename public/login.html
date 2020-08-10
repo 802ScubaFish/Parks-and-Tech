@@ -18,11 +18,10 @@
 
             <!-- placeholder="Enter Password" /  placeholder="Enter Username" these will need to be switched with the values so the admin info isn't auto inputed -->
             <input id='emailField' class="loginField" type="text" value='admin@admin.com' name="name" required>
-            
-            <input id='passwordField' class="loginField" type="password" value='password123' name="psw" 
-                required>
 
-            <button class='styledButtons' onClick="login()" type="submit" >Login</button>
+            <input id='passwordField' class="loginField" type="password" value='password123' name="psw" required>
+
+            <button class='styledButtons' onClick="login()" type="submit">Login</button>
         </div>
     </div>
 
@@ -31,8 +30,8 @@
         <h1>Welcome to the Parks App</h1>
         <a href="/index.html"><img id='logo' src="/imgs/VRPA_logo_color.jpg" alt="VRPA logo"></a>
         <div id='logInButtons'>
-            <button class= "styledButtons" onClick='displayEventForm()'>Create New Event</button>
-            <button class= "styledButtons" onClick='displayFacilityForm()'>Create New Facility</button>
+            <button class="styledButtons" onClick='displayEventForm()'>Create New Event</button>
+            <button class="styledButtons" onClick='displayFacilityForm()'>Create New Facility</button>
             <button onClick="logout()" class="styledButtons">Logout</button>
         </div>
     </div>
@@ -64,10 +63,40 @@
             <label class='eventClass'>Event Expiration
                 <input class="eventInputs" type='date' id="eventExp" /></label>
 
+
+
+            <!-- Check to Select Event Features Checkboxes -->
+            <label class='eventClass' for="sporting">Sporting
+                <input class="eventInputs" type="checkbox" id="sporting" name="eventFeature" /></label>
+            <label class='eventClass' for="biking">Biking
+                <input class="eventInputs" type="checkbox" id="biking" name="eventFeature" /></label>
+            <label class='eventClass' for="running">Running
+                <input class="eventInputs" type="checkbox" id="running" name="eventFeature" /></label>
+            <label class='eventClass' for="swimming">Swimming
+                <input class="eventInputs" type="checkbox" id="swimming" name="eventFeature" /></label>
+            <label class='eventClass' for="fairFestival">Fair / Festival
+                <input class="eventInputs" type="checkbox" id="fairFestival" name="eventFeature" /></label>
+            <label class='eventClass' for="holiday">Holiday
+                <input class="eventInputs" type="checkbox" id="holiday" name="eventFeature" /></label>
+            <label class='eventClass' for="youth">Youth
+                <input class="eventInputs" type="checkbox" id="youth" name="eventFeature" /></label>
+            <label class='eventClass' for="adult">Adult
+                <input class="eventInputs" type="checkbox" id="adult" name="eventFeature" /></label>
+            <label class='eventClass' for="senior">Senior
+                <input class="eventInputs" type="checkbox" id="senior" name="eventFeature" /></label>
+            <label class='eventClass' for="outdoors">Outdoors
+                <input class="eventInputs" type="checkbox" id="outdoors" name="eventFeature" /></label>
+            <label class='eventClass' for="indoors">Indoors
+                <input class="eventInputs" type="checkbox" id="indoors" name="eventFeature" /></label>
+            <label class='eventClass' for="natureBased">Nature Based
+                <input class="eventInputs" type="checkbox" id="natureBased" name="eventFeature" /></label>
+            <label class='eventClass' for="education">Education
+                <input class="eventInputs" type="checkbox" id="education" name="eventFeature" /></label>
+
             <div>
                 <button class='styledButtons' onClick="submitEvent()">Submit Event</button>
-
             </div>
+
         </form>
     </div>
 
@@ -101,33 +130,30 @@
 
             <div id="check-facilities">Check to Select Park Features</div>
 
-            
+
 
 
             <!-- Check to Select Park Features Checkboxes -->
             <label class='facilityClass' for="beach">Beach
-            <input class="facilityInputs" type="checkbox" id="beach" name="facilityFeature" /></label>
+                <input class="facilityInputs" type="checkbox" id="beach" name="facilityFeature" /></label>
             <label class='facilityClass' for="park">Park
-            <input class="facilityInputs" type="checkbox" id="park" name="facilityFeature" /></label>
+                <input class="facilityInputs" type="checkbox" id="park" name="facilityFeature" /></label>
             <label class='facilityClass' for="playground">Playground
-            <input class="facilityInputs" type="checkbox" id="playground" name="facilityFeature" /></label>
+                <input class="facilityInputs" type="checkbox" id="playground" name="facilityFeature" /></label>
             <label class='facilityClass' for="dogPark">Dog Park
-            <input class="facilityInputs" type="checkbox" id="dogPark" name="facilityFeature" /></label>
+                <input class="facilityInputs" type="checkbox" id="dogPark" name="facilityFeature" /></label>
             <label class='facilityClass' for="biking">Biking
-            <input class="facilityInputs" type="checkbox" id="biking" name="facilityFeature" /></label>
+                <input class="facilityInputs" type="checkbox" id="biking" name="facilityFeature" /></label>
             <label class='facilityClass' for="hiking">Hiking
-            <input class="facilityInputs" type="checkbox" id="hiking" name="facilityFeature" /></label>
+                <input class="facilityInputs" type="checkbox" id="hiking" name="facilityFeature" /></label>
             <label class='facilityClass' for="basketball">Basketball Courts
-            <input class="facilityInputs" type="checkbox" id="basketball" name="facilityFeature" /></label>
+                <input class="facilityInputs" type="checkbox" id="basketball" name="facilityFeature" /></label>
             <label class='facilityClass' for="fields">Athletic Fields
-            <input class="facilityInputs" type="checkbox" id="fields" name="facilityFeature" /></label>
-            
-
+                <input class="facilityInputs" type="checkbox" id="fields" name="facilityFeature" /></label>
 
             <div id='facilityButtons'>
                 <button class='styledButtons' onClick="submitFacility()">Submit Facility</button>
             </div>
-
 
         </form>
     </div>
