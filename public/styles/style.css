@@ -101,6 +101,7 @@ a {
   color: white;
   width: 200px;
   padding-right: 1vw;
+  position: fixed;
 }
 
 .adminLogIn {
@@ -108,13 +109,13 @@ a {
 }
 
 /* Nav Bar Main Logo */
-#logo {
+#headerLogo {
   height: 75px;
   width: 75px;
   display: flex;
   /* margin-top: 10vw; */
   margin-bottom: 10vw;
-  margin-left: 15vw;
+  margin-left: 3vw;
   border-radius: 50%;
 }
 
@@ -218,17 +219,19 @@ main {
   border-top: 2px solid #0054a6;
   border-bottom: 2px solid #0054a6;
   margin: 0;
+  padding-bottom: 3vh;
 }
 
 .eventName {
   display: flex;
   justify-content: center;
+  align-items:center;
   background-color:
     /*#f37521 */
     #d8d9d8;
   font-size: 150%;
   width: 100vw;
-  padding: 5%;
+  height:6vh;
   margin-top: 0;
 }
 
@@ -293,7 +296,8 @@ main {
 /* Styling for Footer Section Here */
 #footer {
   display: flex;
-  justify-content: space-between;
+  justify-content: center;
+  align-items:center;
   background-color: #0db8d3;
   height: 50%;
   width: 100%;
@@ -311,8 +315,10 @@ main {
 #footerLogo {
   display: flex;
   justify-content: center;
+  height: 75px;
+  width: 75px;
+  border-radius: 50%;
 }
-
 
 #contactInfo {
   display: flex;
@@ -330,8 +336,8 @@ main {
 /* At a desktop size */
 @media screen and (min-width: 700px) {
 
-  #logo {
-   margin-bottom: 4vw;
+  #footerLogo {
+   /* margin-bottom: 4vw; */
   }
 
   #missTitle{

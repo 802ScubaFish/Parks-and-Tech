@@ -48,7 +48,7 @@ function createPin(place, coords) {
         position: coords,
 
       });
-      console.log(coords)
+      // console.log(coords)
 
       //allows links to pop up when hovered over and disappear when user moves mouse to another pin
       marker.addListener("click", function () {
