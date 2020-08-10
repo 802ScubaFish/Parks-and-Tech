@@ -18,8 +18,7 @@ myDb.ref("/Events").once("value", (res) => {
 
         let eventDate = Date.parse(eventDateString);
 
-        // Add all the objects 
-        eventArray.push(object[objectId]);
+
         // If the current date is one day past the date of any of the events we delete the event.
         if (eventDate < (Date.now() + 86400000)) {
             myDb.ref("Events/" + objectId).remove().then(function () {
@@ -28,6 +27,8 @@ myDb.ref("/Events").once("value", (res) => {
                 // console.error("Error removing document: ", error);
             });
         } else {
+            // Add all the objects 
+            eventArray.push(object[objectId]);
             //Sorts the array so that closest event is first to furthest away date 
             sortedArray = eventArray.sort(function (a, b) {
                 let dateA = new Date(a.eventDate)
@@ -67,4 +68,3 @@ myDb.ref("/Events").once("value", (res) => {
 
     })
 });
-
