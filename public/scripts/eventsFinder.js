@@ -16,36 +16,20 @@ let education = document.getElementById("education");
 //Takes an event and adds it to the page
 function eventSearch() {
   myDb.ref("/Events").once("value", (res) => {
+    displayEvent.innerHTML ="";
     const object = res.val();
-    console.log(sporting.checked)
+    
     if(sporting.checked){
       for (const objectId in object) {
+        var obj= object;
         var dbObj = (object[objectId]["sporting"]);
         if (dbObj==="sporting"){
-          displayEvents();
+          
+          displayEvents(obj);
+          eventsModal.style.display = "none";
+          
         }
-        
-        
       }
-    }
-    // console.log(biking.checked)
-    // console.log(running.checked)  
-    // console.log(swimming.checked)
-    // console.log(fairFestival.checked)
-    // console.log(holiday.checked)
-    // console.log(youth.checked)
-    // console.log(adult.checked)
-    // console.log(senior.checked)
-    // console.log(outdoors.checked)
-    // console.log(indoors.checked)
-    // console.log(natureBased.checked)
-    // console.log(education.checked)
-  
-    for (const objectId in object) {
-      var dbObj = object[objectId];
-      console.log(dbObj)
-
-      
     }
   });
 }

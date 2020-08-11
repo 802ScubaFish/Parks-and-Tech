@@ -4,7 +4,33 @@
 let eventArray = [];
 let sortedArray = [];
 let eventDate;
-let displayEvent;
+let displayEvent= document.getElementById("displayEvent");
+
+function displayEvents(obj) {
+    // console.log("inside function")
+    // Sets up the main container for all the event list items
+    let singleContainer = document.createElement(`div`);
+    singleContainer.classList.add("singleEventContainer"); //this line adds a class to each of the events so we can target them with css styling
+
+    // Each of the event list items variables
+    let eventNames = `<div class="eventName">${obj["eventName"]}</div>`; //we added a class to each event name on this line so we can target them with css styling.
+    let eventDesc = `<div>${obj["eventDesc"]}</div>`;
+    let sortedEventDate = `<div>Date: ${obj["eventDate"]}</div>`;
+    let eventStatus = `<div>Covid Status: ${obj["eventStatus"]}</div>`;
+    let eventTime = `<div>Event Time: ${obj["eventTime"]}</div>`;
+    let eventLoc = `<div>Event Location: ${obj["eventLoc"]}</div>`;
+
+    // Append each event item to the singleContainer un-ordered list element
+    singleContainer.innerHTML += eventNames;
+    singleContainer.innerHTML += eventDesc;
+    singleContainer.innerHTML += sortedEventDate;
+    singleContainer.innerHTML += eventStatus;
+    singleContainer.innerHTML += eventTime;
+    singleContainer.innerHTML += eventLoc;
+    
+    // Append the single container un-ordered list with all the included list elements to the index.html doc
+    displayEvent.append(singleContainer);
+  }
 
 myDb.ref("/Events").once("value", (res) => {
   const object = res.val();
@@ -33,35 +59,8 @@ myDb.ref("/Events").once("value", (res) => {
       });
     }
   }
-
-  function displayEvents() {
-    // Sets up the main container for all the event list items
-    let singleContainer = document.createElement(`div`);
-    singleContainer.classList.add("singleEventContainer"); //this line adds a class to each of the events so we can target them with css styling
-
-    // Each of the event list items variables
-    let eventNames = `<div class="eventName">${eventObj["eventName"]}</div>`; //we added a class to each event name on this line so we can target them with css styling.
-    let eventDesc = `<div>${eventObj["eventDesc"]}</div>`;
-    let sortedEventDate = `<div>Date: ${eventObj["eventDate"]}</div>`;
-    let eventStatus = `<div>Covid Status: ${eventObj["eventStatus"]}</div>`;
-    let eventTime = `<div>Event Time: ${eventObj["eventTime"]}</div>`;
-    let eventLoc = `<div>Event Location: ${eventObj["eventLoc"]}</div>`;
-
-    // Append each event item to the singleContainer un-ordered list element
-    singleContainer.innerHTML += eventNames;
-    singleContainer.innerHTML += eventDesc;
-    singleContainer.innerHTML += sortedEventDate;
-    singleContainer.innerHTML += eventStatus;
-    singleContainer.innerHTML += eventTime;
-    singleContainer.innerHTML += eventLoc;
-
-    // Append the single container un-ordered list with all the included list elements to the index.html doc
-    displayEvent.append(singleContainer);
-  }
-
   sortedArray.forEach((eventObj) => {
-   
-    displayEvents()
-  });
-
+    // console.log("This is running")
+    displayEvents(eventObj)
 });
+})

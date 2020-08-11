@@ -104,5 +104,5 @@ function facilitiesFilter() {
 
 // When the user clicks on <span> (x), close the facilities modal
 function closeFacilitiesModal() {
-  facilityModal.style.display = "none";
+  facilitiesModal.style.display = "none";
 }
