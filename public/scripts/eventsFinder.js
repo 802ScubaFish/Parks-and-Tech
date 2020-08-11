@@ -140,14 +140,17 @@ function eventSearch() {
       }
     }
 
-    // w
+    // Function to remove any duplicate objects in the Events array
     function removeDuplicateData(myArr) {
 
-      // 
+      // Itterating over the array of objects. The first instance of each objects index is recorded.
+      // If a duplicate object is found, the index is checked and if it does not match then the duplicate item is not
+      // added to the array.
       let uniqueObj = myArr.filter((object, index) => {
         return myArr.indexOf(object) === index;
       });
 
+      // Display any non duplicated objects
       uniqueObj.forEach((obj) => {
         displayEvents(obj)
       })
@@ -156,4 +159,5 @@ function eventSearch() {
 
     removeDuplicateData(unSortedEventArray)
   });
+
 }
