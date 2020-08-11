@@ -140,9 +140,10 @@ function eventSearch() {
       }
     }
 
-    // Logic to sort unSortedEventArray Here
+    // w
     function removeDuplicateData(myArr) {
 
+      // 
       let uniqueObj = myArr.filter((object, index) => {
         return myArr.indexOf(object) === index;
       });
