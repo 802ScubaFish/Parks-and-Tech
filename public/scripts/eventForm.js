@@ -98,7 +98,7 @@ function submitEvent() {
 
   if (indoors.checked) {
     indoors = "holiday";
-  } else {
+  } else {oinindoors
     indoors= "";
   }
 
