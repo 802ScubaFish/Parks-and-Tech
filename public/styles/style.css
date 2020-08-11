@@ -212,7 +212,7 @@ main {
 #eventsModal {
   display: none;
   background-color: #d8d9d8;
-  height: 100vh;
+  height: 125vh;
   min-width: 100vw;
   z-index: 1000;
   position: absolute;

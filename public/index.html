@@ -28,7 +28,7 @@
 
   <div id='eventsModal'>
     <button class='styledButtons' onClick='closeEventsModal()' class="close">Close</button>
-    <h1>Search By Event Type!</h1>
+    <h3>Search By Event Type!</h3>
 
     <label class='eventModalLabels' for="sporting">Sporting
       <input class="eventModalInputs" type="checkbox" id="sporting" name="eventFeature" /></label>
@@ -70,7 +70,7 @@
       <input class="eventModalInputs" type="checkbox" id="education" name="eventFeature" /></label>
 
     <div>
-      <button class='styledButtons'>Search</button>
+      <button class='styledButtons' onClick="eventSearch()">Search</button>
     </div>
   </div>
 
@@ -95,7 +95,7 @@
     <label class='facilityModalLabels' for="fields">Athletic Fields
       <input class="facilityModalInputs" type="checkbox" id="fields" name="facilityFeature" /></label><br>
     <div>
-      <button class='styledButtons'>Search</button>
+      <button class='styledButtons' onClick="facilitySearch()">Search</button>
     </div>
   </div>
 
@@ -189,6 +189,8 @@
   <script src='/scripts/mapSetup.js'></script>
   <script src='/scripts/displayEvents.js'></script>
   <script src='/scripts/eventExpiration.js'></script>
+  <script src='/scripts/eventsFinder.js'></script>
+  <script src='/scripts/facilitiesFinder.js'></script>
 
 </body>
 

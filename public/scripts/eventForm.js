@@ -9,10 +9,9 @@ function submitEvent() {
   let eventDesc = document.getElementById("eventDesc").value;
   let eventLoc = document.getElementById("eventLoc").value;
   let eventStatus = document.getElementById("eventStatus").value;
-  let eventExp = document.getElementById("eventExp").value;
+ 
   let uid = Date.now();
   
-
   //Facilities Activities Checkboxes
   let sporting = document.getElementById("sporting");
 
@@ -126,7 +125,6 @@ function submitEvent() {
     eventDesc: eventDesc,
     eventLoc: eventLoc,
     eventStatus: eventStatus,
-    eventExp: eventExp,
     uid: uid,
     sporting: sporting,
     biking: biking, 
