@@ -76,7 +76,7 @@ a {
   background-color: #0db8d3;
   height: 18%;
   width: 100%;
-  padding-top: 4vh;
+  
 }
 
 #title {
@@ -99,12 +99,25 @@ a {
   text-align: end;
   text-decoration: none;
   color: white;
-  width: 200px;
-  padding-right: 1vw;
+  width: 100%;
+  
 }
 
 .adminLogIn {
   color: white;
+  padding-right: 2vw;
+}
+
+#welcomeMessageBackground {
+  background-color: #0db8d3;
+  width: 100%;
+}
+
+#welcomeMessage {
+  width:95%;
+  margin:auto;
+  font-size: 90%;
+  background-color: #0db8d3;
 }
 
 /* Nav Bar Main Logo */
@@ -380,10 +393,6 @@ main {
   #missTitle{
     margin-bottom: 1vh;
     
-  }
-
-  #adminLogIn{
-    width: 60px
   }
 
 }
