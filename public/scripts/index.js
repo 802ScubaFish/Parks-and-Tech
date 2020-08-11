@@ -46,14 +46,13 @@ function createPin(place, coords) {
   var infoWindow = new google.maps.InfoWindow({
     content: pinContent
   })
-  //places marker on map
+  //Places marker on map
   var marker = new google.maps.Marker({
     position: coords,
 
   });
-  // console.log(coords)
 
-  //allows links to pop up when hovered over and disappear when user moves mouse to another pin
+  //Allows links to pop up when hovered over and disappear when user moves mouse to another pin
   marker.addListener("click", function () {
     if (activeInfoWindow) {
       activeInfoWindow.close()
@@ -67,6 +66,7 @@ function createPin(place, coords) {
 
 }
 
+// Opens the Events Modal
 function eventsFilter() {
 
   var eventsModal = document.getElementById("eventsModal");
@@ -81,6 +81,13 @@ function eventsFilter() {
 
 }
 
+// When the user clicks on <span> (x), close events the modal
+function closeEventsModal() {
+  eventsModal.style.display = "none";
+}
+
+
+// Opens the Facilities Modal
 function facilitiesFilter() {
 
   var facilityModal = document.getElementById("facilitiesModal");
@@ -93,4 +100,9 @@ function facilitiesFilter() {
     facilityModal.style.display = "none";
   }
 
+}
+
+// When the user clicks on <span> (x), close the facilities modal
+function closeFacilitiesModal() {
+  facilityModal.style.display = "none";
 }
