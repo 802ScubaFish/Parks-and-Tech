@@ -2,6 +2,8 @@
 
 let map;
 var activeInfoWindow;
+let markersArray=[];
+
 // Creates the map and centers on Vermont
 function initMap() {
   map = new google.maps.Map(document.getElementById("map"), {
@@ -17,7 +19,6 @@ function initMap() {
   myDb.ref("/Facilities").once("value", (res) => {
     const object = res.val();
     // console.log(res.val())
-
     for (const objectId in object) {
       var dbObj = object[objectId]
       var myLatLng = {
@@ -49,20 +50,25 @@ function createPin(place, coords) {
   //Places marker on map
   var marker = new google.maps.Marker({
     position: coords,
-
   });
 
+   markersArray.push(marker)
+   console.log(markersArray);
+  
   //Allows links to pop up when hovered over and disappear when user moves mouse to another pin
   marker.addListener("click", function () {
+    
+    
     if (activeInfoWindow) {
       activeInfoWindow.close()
     }
     infoWindow.open(map, marker)
     activeInfoWindow = infoWindow
+
+    
   })
 
   marker.setMap(map);
-
 
 }
 
