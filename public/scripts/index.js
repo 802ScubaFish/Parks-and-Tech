@@ -28,7 +28,7 @@ function initMap() {
 
       //only creates pins for facilities with lat and long entered
       if (myLatLng.lat != "" || myLatLng.long != "") {
-        createPin(dbObj, myLatLng)
+        createPin(dbObj, myLatLng, object[objectId]["uid"])
       }
     }
 
@@ -37,7 +37,7 @@ function initMap() {
 
 
 // creates infoWindow content for marker and places marker on map
-function createPin(place, coords) {
+function createPin(place, coords, uid) {
 
   //allows name of facility to act as link
   let pinContent =
@@ -50,10 +50,12 @@ function createPin(place, coords) {
   //Places marker on map
   var marker = new google.maps.Marker({
     position: coords,
+    uid: uid
   });
 
    markersArray.push(marker)
-   console.log(markersArray);
+   
+
   
   //Allows links to pop up when hovered over and disappear when user moves mouse to another pin
   marker.addListener("click", function () {
@@ -70,6 +72,8 @@ function createPin(place, coords) {
 
   marker.setMap(map);
 
+  
+  
 }
 
 // Opens the Events Modal

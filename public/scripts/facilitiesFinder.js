@@ -111,8 +111,9 @@ function facilitySearch() {
       }
     }
   });
-
-  console.log(unsortedFacilitiesArray);
-  setMapOnAll(map, unsortedFacilitiesArray )
+  
+  markersArray.forEach((object)=>{
+    console.log(object.uid)
+  })
   closeFacilitiesModal();
 }
