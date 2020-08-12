@@ -5,36 +5,29 @@ let playground = document.getElementById("playground");
 let dogPark = document.getElementById("dogPark");
 let bikingFacility = document.getElementById("bikingFacilities");
 let hiking = document.getElementById("hiking");
-let basketballCourts = document.getElementById("basketballCourts");
-let athleticFields = document.getElementById("athleticFields");
+let basketball = document.getElementById("basketball");
+let fields = document.getElementById("fields");
 let unsortedFacilitiesArray = [];
 
-// function clearMarkers(){
-//     console.log(markersArray)
-//     markersArray= [];
-//     console.log(markersArray)
-// }
-
 // Sets the map on all markers in the array.
-function setMapOnAll(map) {
-    for (let i = 0; i < markersArray.length; i++) {
-      markersArray[i].setMap(map);
-    }
+function setMapOnAll(map, arr) {
+  console.log(arr);
+  for (let i = 0; i < arr.length; i++) {
+    arr[i].setMap(map);
   }
+}
 
 // Removes the markers from the map, but keeps them in the array.
 function clearMarkers() {
-    setMapOnAll(null);
+  for (let i = 0; i < markersArray.length; i++) {
+    markersArray[i].setMap(null);
   }
-  
-
-
+}
 
 //Takes a facility and adds it to the page sorted.
 function facilitySearch() {
-console.log("This is called")
   clearMarkers();
- 
+
   myDb.ref("/Facilities").once("value", (res) => {
     const object = res.val();
 
@@ -99,26 +92,27 @@ console.log("This is called")
     }
 
     //If basketballCourts is checked, it returns basketballCourts
-    if (basketballCourt.checked) {
+    if (basketball.checked) {
       for (const objectId in object) {
-        var dbObj = object[objectId]["basketballCourts"];
-        if (dbObj === "basketballCourts") {
+        var dbObj = object[objectId]["basketball"];
+        if (dbObj === "basketball") {
           unsortedFacilitiesArray.push(object[objectId]);
         }
       }
     }
 
     //If athleticFields is checked, it returns athleticFields
-    if (athleticFields.checked) {
+    if (fields.checked) {
       for (const objectId in object) {
-        var dbObj = object[objectId]["athleticFields"];
-        if (dbObj === "athleticFields") {
+        var dbObj = object[objectId]["fields"];
+        if (dbObj === "fields") {
           unsortedFacilitiesArray.push(object[objectId]);
         }
       }
     }
   });
+
+  console.log(unsortedFacilitiesArray);
+  setMapOnAll(map, unsortedFacilitiesArray )
+  closeFacilitiesModal();
 }
-
-
-
