@@ -62,7 +62,7 @@ function sortDates(sortedObj) {
     }
   }
 
-  console.log(eventArray)
+
   return eventArray
 }
 

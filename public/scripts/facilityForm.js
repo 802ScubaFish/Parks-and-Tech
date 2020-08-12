@@ -46,10 +46,10 @@ function submitFacility() {
     dogPark= "";
   }
 
-  let biking = document.getElementById("biking");
+  let biking = document.getElementById("bikingFacilities");
 
   if (biking.checked) {
-    biking = "biking";
+    biking = "bikingFacilities";
   } else {
     biking= "";
   }
