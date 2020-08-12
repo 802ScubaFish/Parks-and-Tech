@@ -14,7 +14,6 @@ let natureBased = document.getElementById("natureBased");
 let education = document.getElementById("education");
 let unSortedEventArray = [];
 
-
 //Takes an event and adds it to the page
 function eventSearch() {
   myDb.ref("/Events").once("value", (res) => {
@@ -154,6 +153,7 @@ function eventSearch() {
       uniqueObj.forEach((obj) => {
         displayEvents(obj)
       })
+      sortDates()
       closeEventsModal()
     }
 

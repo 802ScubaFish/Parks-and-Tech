@@ -145,8 +145,6 @@ function submitEvent() {
 
   //Opens the connection to the database and sets the object to the database
   myDb.ref(`/Events/event_${uid}`).set(formObj)
-  document.getElementById('eventForm').reset();
-
-  
+  document.getElementById('eventForm').reset(); 
   
 }
