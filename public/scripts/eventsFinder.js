@@ -148,10 +148,11 @@ function eventSearch() {
       let uniqueObj = myArr.filter((object, index) => {
         return myArr.indexOf(object) === index;
       });
+
       console.log(uniqueObj)
+      
       uniqueObj = sortDates(uniqueObj)
       
-
       // Display any non duplicated objects
       uniqueObj.forEach((obj) => {
         

@@ -1,3 +1,6 @@
+var eventForm = document.getElementById("wholeEventForm");
+var facilityForm = document.getElementById("wholeFacilityForm");
+
 parksAndTechApp.auth().onAuthStateChanged(function (user) {
   if (user) {
     // User is signed in.
@@ -32,7 +35,10 @@ function login() {
 }
 
 function logout() {
+  
   parksAndTechApp.auth().signOut().then(function () {
+    eventForm.style.display === 'none';
+    facilityForm.style.display = "none";
     // Sign-out successful.
   }).catch(function (error) {
     // An error happened.
@@ -41,7 +47,7 @@ function logout() {
 
 function displayEventForm() {
 
-  var eventForm = document.getElementById("wholeEventForm");
+  
 
   if (!eventForm.style.display) {
     eventForm.style.display = "block";
@@ -55,7 +61,6 @@ function displayEventForm() {
 
 function displayFacilityForm() {
 
-  var facilityForm = document.getElementById("wholeFacilityForm");
 
   if (!facilityForm.style.display) {
     facilityForm.style.display = "block";
