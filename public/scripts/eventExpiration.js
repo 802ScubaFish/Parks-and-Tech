@@ -28,7 +28,10 @@ function displayEvents(obj) {
   singleContainer.innerHTML += eventLoc;
 
   // Append the single container un-ordered list with all the included list elements to the index.html doc
+  // only append if we are on the home page 'index.html'
+  if (window.location.pathname.split('/')[1] === "index.html") {
   displayEvent.append(singleContainer);
+  }
 }
 
 // For Loop converts each date into miliseconds, and then adds it to the eventArray
