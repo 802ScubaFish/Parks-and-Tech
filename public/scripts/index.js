@@ -114,3 +114,15 @@ function facilitiesFilter() {
 function closeFacilitiesModal() {
   facilitiesModal.style.display = "none";
 }
+
+function resetFilters() {
+
+  setMapOnAll(map, markersArray)
+
+  fullEventArray.forEach((eventObj) => {
+
+    displayEvents(eventObj);
+
+  });
+
+}

@@ -12,13 +12,13 @@ let outdoors = document.getElementById("outdoors");
 let indoors = document.getElementById("indoors");
 let natureBased = document.getElementById("natureBased");
 let education = document.getElementById("education");
-let unSortedEventArray = [];
+let unsortedEventsArray = [];
 
 //Takes an event and adds it to the page
 function eventSearch() {
   myDb.ref("/Events").once("value", (res) => {
     displayEvent.innerHTML = "";
-    unSortedEventArray = [];
+    unsortedEventsArray = [];
     const object = res.val();
 
     //If sporting is checked, it returns sporting events
@@ -26,7 +26,7 @@ function eventSearch() {
       for (const objectId in object) {
         var dbObj = object[objectId]["sporting"];
         if (dbObj === "sporting") {
-          unSortedEventArray.push(object[objectId])
+          unsortedEventsArray.push(object[objectId])
         }
       }
     }
@@ -35,7 +35,7 @@ function eventSearch() {
       for (const objectId in object) {
         var dbObj = object[objectId]["biking"];
         if (dbObj === "biking") {
-          unSortedEventArray.push(object[objectId]);
+          unsortedEventsArray.push(object[objectId]);
         }
       }
     }
@@ -44,7 +44,7 @@ function eventSearch() {
       for (const objectId in object) {
         var dbObj = object[objectId]["running"];
         if (dbObj === "running") {
-          unSortedEventArray.push(object[objectId]);
+          unsortedEventsArray.push(object[objectId]);
         }
       }
     }
@@ -53,7 +53,7 @@ function eventSearch() {
       for (const objectId in object) {
         var dbObj = object[objectId]["swimming"];
         if (dbObj === "swimming") {
-          unSortedEventArray.push(object[objectId]);
+          unsortedEventsArray.push(object[objectId]);
         }
       }
     }
@@ -62,7 +62,7 @@ function eventSearch() {
       for (const objectId in object) {
         var dbObj = object[objectId]["fairFestival"];
         if (dbObj === "fair / festival") {
-          unSortedEventArray.push(object[objectId]);
+          unsortedEventsArray.push(object[objectId]);
         }
       }
     }
@@ -72,7 +72,7 @@ function eventSearch() {
       for (const objectId in object) {
         var dbObj = object[objectId]["holiday"];
         if (dbObj === "holiday") {
-          unSortedEventArray.push(object[objectId]);
+          unsortedEventsArray.push(object[objectId]);
         }
       }
     }
@@ -81,7 +81,7 @@ function eventSearch() {
       for (const objectId in object) {
         var dbObj = object[objectId]["youth"];
         if (dbObj === "youth") {
-          unSortedEventArray.push(object[objectId]);
+          unsortedEventsArray.push(object[objectId]);
         }
       }
     }
@@ -90,7 +90,7 @@ function eventSearch() {
       for (const objectId in object) {
         var dbObj = object[objectId]["adult"];
         if (dbObj === "adult") {
-          unSortedEventArray.push(object[objectId]);
+          unsortedEventsArray.push(object[objectId]);
         }
       }
     }
@@ -99,7 +99,7 @@ function eventSearch() {
       for (const objectId in object) {
         var dbObj = object[objectId]["senior"];
         if (dbObj === "senior") {
-          unSortedEventArray.push(object[objectId]);
+          unsortedEventsArray.push(object[objectId]);
         }
       }
     }
@@ -108,7 +108,7 @@ function eventSearch() {
       for (const objectId in object) {
         var dbObj = object[objectId]["outdoors"];
         if (dbObj === "outdoors") {
-          unSortedEventArray.push(object[objectId]);
+          unsortedEventsArray.push(object[objectId]);
         }
       }
     }
@@ -117,7 +117,7 @@ function eventSearch() {
       for (const objectId in object) {
         var dbObj = object[objectId]["indoors"];
         if (dbObj === "indoors") {
-          unSortedEventArray.push(object[objectId]);
+          unsortedEventsArray.push(object[objectId]);
         }
       }
     }
@@ -126,7 +126,7 @@ function eventSearch() {
       for (const objectId in object) {
         var dbObj = object[objectId]["natureBased"];
         if (dbObj === "nature based") {
-          unSortedEventArray.push(object[objectId]);
+          unsortedEventsArray.push(object[objectId]);
         }
       }
     }
@@ -135,13 +135,13 @@ function eventSearch() {
       for (const objectId in object) {
         var dbObj = object[objectId]["education"];
         if (dbObj === "education") {
-          unSortedEventArray.push(object[objectId]);
+          unsortedEventsArray.push(object[objectId]);
         }
       }
     }
 
     // If no filter checkboxes are selected then we return our unchanged global event variable to re-display the full events list
-    if(unSortedEventArray.length === 0){
+    if(unsortedEventsArray.length === 0){
 
      fullEventArray.forEach((eventObj) => {
 
@@ -170,7 +170,7 @@ function eventSearch() {
       
       closeEventsModal()
     }
-    removeDuplicateData(unSortedEventArray)
+    removeDuplicateData(unsortedEventsArray)
   });
 
 }
