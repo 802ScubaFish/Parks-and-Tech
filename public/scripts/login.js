@@ -37,10 +37,11 @@ function login() {
 function logout() {
   
   parksAndTechApp.auth().signOut().then(function () {
-    eventForm.style.display === 'none';
+    eventForm.style.display = 'none';
     facilityForm.style.display = "none";
     // Sign-out successful.
   }).catch(function (error) {
+    alert(error)
     // An error happened.
   });
 }
