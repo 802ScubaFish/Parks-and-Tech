@@ -46,12 +46,12 @@ function submitFacility() {
     dogPark= "";
   }
 
-  let biking = document.getElementById("bikingFacilities");
+  let  = document.getElementById("bikingFacilities");
 
   if (biking.checked) {
-    biking = "bikingFacilities";
+    bikingFacilities = "bikingFacilities";
   } else {
-    biking= "";
+    bikingFacilities= "";
   }
 
   let hiking = document.getElementById("hiking");
@@ -80,8 +80,6 @@ function submitFacility() {
 
   formObj = {
     facilityName: facilityName,
-    // facilityType: facilityType,
-    // activityType: activityType,
     location: location,
     announcements: announcements,
     contactInfo: contactInfo,
@@ -92,7 +90,7 @@ function submitFacility() {
     park: park,
     playground: playground,
     dogPark: dogPark, 
-    biking: biking,
+    bikingFacilities: bikingFacilities,
     hiking: hiking, 
     basketball: basketball,
     fields: fields, 
