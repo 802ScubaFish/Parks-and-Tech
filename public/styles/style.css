@@ -109,6 +109,7 @@ a {
 }
 
 #welcomeMessageBackground {
+  padding-top: 5%;
   background-color: #0db8d3;
   width: 100%;
 }
@@ -149,10 +150,7 @@ main {
   display: flex;
   flex-direction: row;
   justify-content: center;
-  width: 75%;
-  padding-left:10%;
-  margin: auto;
-  text-align: center;
+  width: 100%;
 }
 
 #searchTitle {
@@ -343,6 +341,26 @@ main {
   color: black;
 }
 
+/* Styling for To Top Button */
+#toTop {
+  display: none; /* Hidden by default */
+  position: fixed; /* Fixed/sticky position */
+  bottom: 20px; /* Place the button at the bottom of the page */
+  right: 30px; /* Place the button 30px from the right */
+  z-index: 99; /* Make sure it does not overlap */
+  border: none; /* Remove borders */
+  outline: none; /* Remove outline */
+  background-color: #2ac194; /* Set a background color */
+  color: white; /* Text color */
+  cursor: pointer; /* Add a mouse pointer on hover */
+  padding: 15px; /* Some padding */
+  border-radius: 10px; /* Rounded corners */
+  font-size: 12px; /* Increase font size */
+}
+
+#toTop:hover {
+  background-color: #555; /* Add a dark-grey background on hover */
+}
 
 /* At a desktop size */
 @media screen and (min-width: 700px) {
@@ -359,6 +377,11 @@ main {
   #headerLogo {
     height:20vh;
     width:auto;
+  }
+
+  #welcomeMessage {
+   display:flex;
+   justify-content: center;
   }
 
 }

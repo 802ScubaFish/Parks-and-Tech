@@ -17,7 +17,7 @@ function displayEvents(obj) {
   let eventDesc = `<div class='eventDesc'>${obj["eventDesc"]}</div>`;
   let sortedEventDate = `<div>Date: ${obj["eventDate"]}</div>`;
   let eventStatus = `<div>Covid Status: ${obj["eventStatus"]}</div>`;
-  let eventTime = `<div>Event Time: ${obj["eventTime"]}</div>`;
+  let eventTime = `<div>Event Time: ${convertTime(obj["eventTime"])} </div>`;
   let eventLoc = `<div>Event Location: ${obj["eventLoc"]}</div>`;
 
   // Append each event item to the singleContainer un-ordered list element
@@ -28,11 +28,33 @@ function displayEvents(obj) {
   singleContainer.innerHTML += eventTime;
   singleContainer.innerHTML += eventLoc;
 
+console.log(obj['eventDate'])
   // Append the single container un-ordered list with all the included list elements to the index.html doc
   // only append if we are on the home page 'index.html'
   if (window.location.pathname.split('/')[1] === "index.html" || window.location.pathname.split('/')[1] === "") {
     displayEvent.append(singleContainer);
   }
+  convertTime(obj['eventTime'])
+}
+
+function convertTime(string) {
+
+  let stringTime = string.split(':')[0]
+  let stringTimeMinutes = string.split(":")[1]
+  let totalTime;
+
+  parsedTime = parseInt(stringTime)
+
+  if (parsedTime > 12) {
+    parsedTime = parsedTime - 12
+    totalTime = parsedTime + ":" + stringTimeMinutes +
+      "PM"
+  } else if (parsedTime < 12) {
+    totalTime = parsedTime + ":" + stringTimeMinutes +
+      "AM"
+  }
+  return totalTime
+
 }
 
 // For Loop converts each date into miliseconds, and then adds it to the eventArray
@@ -49,7 +71,7 @@ function sortDates(sortedObj) {
     // If the current date is one day past the date of any of the events we delete the event.
     if (eventDate < (Date.now() + 86400000)) {
       myDb.ref("Events/" + objectId).remove().then(function () {
-        // console.log("Document successfully deleted!");
+
       }).catch(function (error) {
         alert(error)
       })
@@ -74,7 +96,7 @@ function sortDates(sortedObj) {
 
 myDb.ref("/Events").once("value", (res) => {
   const object = res.val();
-  
+
   // Sorts and builds our fullEventArray that we keep constant to use in the events filter
   sortDates(object)
 

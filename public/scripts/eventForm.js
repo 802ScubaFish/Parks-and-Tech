@@ -9,14 +9,14 @@ function submitEvent() {
   let eventDesc = document.getElementById("eventDesc").value;
   let eventLoc = document.getElementById("eventLoc").value;
   let eventStatus = document.getElementById("eventStatus").value;
- 
+
   let uid = Date.now();
-  
-  //Facilities Activities Checkboxes
+
+  //Event Activities Checkboxes
   let sporting = document.getElementById("sporting");
 
 
-  if (sporting.checked ) {
+  if (sporting.checked) {
     sporting = "sporting";
   } else {
     sporting = "";
@@ -35,7 +35,7 @@ function submitEvent() {
   if (running.checked) {
     running = "running";
   } else {
-    running= "";
+    running = "";
   }
 
   let swimming = document.getElementById("swimming");
@@ -43,7 +43,7 @@ function submitEvent() {
   if (swimming.checked) {
     swimming = "swimming";
   } else {
-    swimming= "";
+    swimming = "";
   }
 
   let fairFestival = document.getElementById("fairFestival");
@@ -51,7 +51,7 @@ function submitEvent() {
   if (fairFestival.checked) {
     fairFestival = "fair / festival";
   } else {
-    fairFestival= "";
+    fairFestival = "";
   }
 
   let holiday = document.getElementById("holiday");
@@ -59,15 +59,15 @@ function submitEvent() {
   if (holiday.checked) {
     holiday = "holiday";
   } else {
-    holiday= "";
+    holiday = "";
   }
 
   let youth = document.getElementById("youth");
 
-  if (youth.checked){
+  if (youth.checked) {
     youth = "youth";
   } else {
-    youth= "";
+    youth = "";
   }
 
   let adult = document.getElementById("adult");
@@ -75,7 +75,7 @@ function submitEvent() {
   if (adult.checked) {
     adult = "adult";
   } else {
-    adult= "";
+    adult = "";
   }
 
   let senior = document.getElementById("senior");
@@ -83,7 +83,7 @@ function submitEvent() {
   if (senior.checked) {
     senior = "senior";
   } else {
-    senior= "";
+    senior = "";
   }
 
   let outdoors = document.getElementById("outdoors");
@@ -91,23 +91,24 @@ function submitEvent() {
   if (outdoors.checked) {
     outdoors = "outdoors";
   } else {
-    outdoors= "";
+    outdoors = "";
   }
 
   let indoors = document.getElementById("indoors");
 
   if (indoors.checked) {
     indoors = "holiday";
-  } else {indoors
-    indoors= "";
+  } else {
+    indoors
+    indoors = "";
   }
 
   let natureBased = document.getElementById("natureBased");
 
-  if (natureBased.checked){
+  if (natureBased.checked) {
     natureBased = "nature based";
   } else {
-    natureBased= "";
+    natureBased = "";
   }
 
   let education = document.getElementById("education");
@@ -115,7 +116,7 @@ function submitEvent() {
   if (education.checked) {
     education = "education";
   } else {
-    education= "";
+    education = "";
   }
 
   formObj = {
@@ -127,9 +128,9 @@ function submitEvent() {
     eventStatus: eventStatus,
     uid: uid,
     sporting: sporting,
-    biking: biking, 
-    running: running, 
-    swimming: swimming, 
+    biking: biking,
+    running: running,
+    swimming: swimming,
     fairFestival: fairFestival,
     holiday: holiday,
     youth: youth,
@@ -141,10 +142,10 @@ function submitEvent() {
     education: education
   };
 
- 
+
 
   //Opens the connection to the database and sets the object to the database
   myDb.ref(`/Events/event_${uid}`).set(formObj)
-  document.getElementById('eventForm').reset(); 
-  
+  document.getElementById('eventForm').reset();
+
 }
