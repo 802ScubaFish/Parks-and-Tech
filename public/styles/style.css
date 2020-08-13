@@ -81,7 +81,7 @@ a {
 }
 
 #title {
-  font-size: 6vw;
+  font-size: 15vw;
   text-align: center;
   color: black;
 }
@@ -140,15 +140,19 @@ main {
 }
 
 /* Search Bar Styling */
+#searchBarBackground {
+  background-color: lightgray;
+}
+
 #searchBar {
   background-color: lightgray;
   display: flex;
   flex-direction: row;
   justify-content: center;
-  width: 100%;
+  width: 75%;
+  padding-left:10%;
   margin: auto;
   text-align: center;
-  margin: auto
 }
 
 #searchTitle {
