@@ -29,7 +29,7 @@ function displayEvents(obj) {
 
   // Append the single container un-ordered list with all the included list elements to the index.html doc
   // only append if we are on the home page 'index.html'
-  if (window.location.pathname.split('/')[1] === "index.html") {
+  if (window.location.pathname.split('/')[1] === "index.html" || window.location.pathname.split('/')[1] === "") {
   displayEvent.append(singleContainer);
   }
 }
