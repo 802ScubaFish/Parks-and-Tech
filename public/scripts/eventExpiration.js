@@ -5,14 +5,34 @@ let sortedArray = [];
 let eventDate;
 let displayEvent = document.getElementById("displayEvent");
 
+let iconList = {
+  biking: "pedal_bike",
+  education: "local_library",
+  fairFestival: "local_play",
+  holiday: "cake",
+  indoors: "home_work",
+  natureBased: "eco",
+  outdoors: "terrain",
+  running: "directions_run",
+  sporting: "sports_soccer",
+  swimming: "pool"
+}
+
 function displayEvents(obj) {
   // console.log("inside function")
   // Sets up the main container for all the event list items
   let singleContainer = document.createElement(`div`);
   singleContainer.classList.add("singleEventContainer"); //this line adds a class to each of the events so we can target them with css styling
+  console.log(obj)
 
+  let iconString = ""
+  for (let icon in iconList) {
+    if (obj[icon].length !== 0) {
+      iconString += `<i class="material-icons">${iconList[icon]}</i>`
+    }
+  }
   // Each of the event list items variables
-  let eventNames = `<div class="eventName">${obj["eventName"]}</div>`; //we added a class to each event name on this line so we can target them with css styling.
+  let eventNames = `<div class="eventName">${obj["eventName"]} ${iconString}</div>`; //we added a class to each event name on this line so we can target them with css styling.
   let eventDesc = `<div>${obj["eventDesc"]}</div>`;
   let sortedEventDate = `<div>Date: ${obj["eventDate"]}</div>`;
   let eventStatus = `<div>Covid Status: ${obj["eventStatus"]}</div>`;
