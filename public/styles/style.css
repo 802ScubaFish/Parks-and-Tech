@@ -73,8 +73,9 @@ a {
   display: flex;
   flex-direction: row;
   justify-content: space-evenly;
+  align-items: center;
   background-color: #0db8d3;
-  height: 18%;
+  height: 11%;
   width: 100%;
   
 }
@@ -98,14 +99,13 @@ a {
   background-color: #0db8d3;
   text-align: end;
   text-decoration: none;
-  color: white;
   width: 100%;
-  
+  padding-top:2%;
 }
 
-.adminLogIn {
+#adminLogInText {
   color: white;
-  padding-right: 2vw;
+  padding-right: 5vw;
 }
 
 #welcomeMessageBackground {
@@ -118,6 +118,7 @@ a {
   margin:auto;
   font-size: 90%;
   background-color: #0db8d3;
+  padding-bottom: 3%;
 }
 
 /* Nav Bar Main Logo */
@@ -126,58 +127,10 @@ a {
   width: 75px;
   display: flex;
   /* margin-top: 10vw; */
-  margin-bottom: 10vw;
+ 
   margin-left: 3vw;
   border-radius: 50%;
 }
-
-/* Hamburger Menu 
-.menuButton {
-  position: relative;
-  display: flex;
-  justify-content: center;
-  align-items: center;
-  width: 80px;
-  height: 80px;
-  cursor: pointer;
-  transition: all 0.5s ease-in-out;
-  margin-top: 5%;
-  margin-bottom: 5%;
-  margin-right: 5%;
-} */
-
-/* Adds middle burger line  
-.burgerMenuButton {
-  width: 50px;
-  height: 6px;
-  background: white;
-  border-radius: 5px;
-  box-shadow: 0 2px 5px rgba(255, 101, 47, 0.2);
-  transition: all 0.5s ease-in-out;
-  float: right;
-} */
-
-/* Creates the other hamburger menu lines 
-.burgerMenuButton::before,
-.burgerMenuButton::after {
-  content: "";
-  position: absolute;
-  width: 50px;
-  height: 6px;
-  background: white;
-  border-radius: 5px;
-  box-shadow: 0 2px 5px rgba(255, 101, 47, 0.2);
-  transition: all 0.5s ease-in-out;
-} */
-
-/* .burgerMenuButton::before {
-  transform: translateY(-16px);
-}
-.burgerMenuButton::after {
-  transform: translateY(16px);
-} */
-
-
 
 /* Main section */
 main {
@@ -285,6 +238,10 @@ main {
   margin-top: 0;
 }
 
+.eventDesc {
+  padding-left: 2%;
+}
+
 .eventTitle {
   display: flex;
   justify-content: center;
@@ -385,10 +342,6 @@ main {
 
 /* At a desktop size */
 @media screen and (min-width: 700px) {
-
-  #footerLogo {
-   /* margin-bottom: 4vw; */
-  }
 
   #missTitle{
     margin-bottom: 1vh;

@@ -13,7 +13,7 @@ function displayEvents(obj) {
 
   // Each of the event list items variables
   let eventNames = `<div class="eventName">${obj["eventName"]}</div>`; //we added a class to each event name on this line so we can target them with css styling.
-  let eventDesc = `<div>${obj["eventDesc"]}</div>`;
+  let eventDesc = `<div class='eventDesc'>${obj["eventDesc"]}</div>`;
   let sortedEventDate = `<div>Date: ${obj["eventDate"]}</div>`;
   let eventStatus = `<div>Covid Status: ${obj["eventStatus"]}</div>`;
   let eventTime = `<div>Event Time: ${obj["eventTime"]}</div>`;

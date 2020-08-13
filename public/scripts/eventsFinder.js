@@ -18,6 +18,7 @@ let unSortedEventArray = [];
 function eventSearch() {
   myDb.ref("/Events").once("value", (res) => {
     displayEvent.innerHTML = "";
+    unSortedEventArray = [];
     const object = res.val();
 
     //If sporting is checked, it returns sporting events
