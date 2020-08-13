@@ -140,6 +140,17 @@ function eventSearch() {
       }
     }
 
+    // If no filter checkboxes are selected then we return our unchanged global event variable to re-display the full events list
+    if(unSortedEventArray.length === 0){
+
+     fullEventArray.forEach((eventObj) => {
+
+        displayEvents(eventObj);
+
+      });
+
+    }
+
     // Function to remove any duplicate objects in the Events array
     function removeDuplicateData(myArr) {
 
@@ -150,19 +161,15 @@ function eventSearch() {
         return myArr.indexOf(object) === index;
       });
 
-      console.log(uniqueObj)
-      
       uniqueObj = sortDates(uniqueObj)
       
-      // Display any non duplicated objects
-      uniqueObj.forEach((obj) => {
-        
-        displayEvents(obj)
-      })
+        // Display any non duplicated objects
+        uniqueObj.forEach((obj) => {
+          displayEvents(obj)
+        })
       
       closeEventsModal()
     }
-
     removeDuplicateData(unSortedEventArray)
   });
 

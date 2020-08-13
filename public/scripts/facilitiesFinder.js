@@ -11,7 +11,7 @@ let unsortedFacilitiesArray = [];
 
 // Sets the map on all markers in the array.
 function setMapOnAll(map, arr) {
-    console.log(arr);
+  
     for (let i = 0; i < arr.length; i++) {
         arr[i].setMap(map);
     }
@@ -119,8 +119,7 @@ function facilitySearch() {
                     }
                 }
             }))
-            console.log(unsortedFacilitiesArray)
-            console.log(markerUids)
+            
 
             markerUids.map((marker) => {
                     marker.setMap(map)

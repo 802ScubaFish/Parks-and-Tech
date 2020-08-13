@@ -14,7 +14,7 @@ function submitFacility() {
 
 //Facilities Activities Checkboxes
   let beach = document.getElementById("beach");
-  console.log(beach)
+
 
   if (beach.checked ) {
     beach = "beach";
@@ -97,7 +97,7 @@ function submitFacility() {
     uid: uid,
   };
 
-  console.log(formObj)
+  
 
   //Opens the connection to the database and sets the object to the database
   myDb.ref(`/Facilities/facility_${uid}`).set(formObj);

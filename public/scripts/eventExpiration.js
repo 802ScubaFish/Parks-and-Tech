@@ -2,11 +2,12 @@
 
 // Create and empty Array to push dates to
 let sortedArray = [];
+let fullEventArray = []
 let eventDate;
 let displayEvent = document.getElementById("displayEvent");
 
 function displayEvents(obj) {
-  // console.log("inside function")
+
   // Sets up the main container for all the event list items
   let singleContainer = document.createElement(`div`);
   singleContainer.classList.add("singleEventContainer"); //this line adds a class to each of the events so we can target them with css styling
@@ -30,7 +31,7 @@ function displayEvents(obj) {
   // Append the single container un-ordered list with all the included list elements to the index.html doc
   // only append if we are on the home page 'index.html'
   if (window.location.pathname.split('/')[1] === "index.html" || window.location.pathname.split('/')[1] === "") {
-  displayEvent.append(singleContainer);
+    displayEvent.append(singleContainer);
   }
 }
 
@@ -55,6 +56,7 @@ function sortDates(sortedObj) {
     } else {
       // Add all the objects
       eventArray.push(sortedObj[objectId]);
+
       //Sorts the array so that closest event is first to furthest away date
       sortedArray = eventArray.sort(function (a, b) {
         let dateA = new Date(a.eventDate);
@@ -65,14 +67,18 @@ function sortDates(sortedObj) {
     }
   }
 
-
   return eventArray
 }
 
+
+
 myDb.ref("/Events").once("value", (res) => {
   const object = res.val();
-
+  
+  // Sorts and builds our fullEventArray that we keep constant to use in the events filter
   sortDates(object)
+
+  fullEventArray = sortedArray;
 
   sortedArray.forEach((eventObj) => {
     // console.log("This is running")

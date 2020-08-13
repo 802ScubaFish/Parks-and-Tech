@@ -352,6 +352,15 @@ main {
     
   }
 
+  #title {
+    font-size: 5vw;
+  }
+
+  #headerLogo {
+    height:20vh;
+    width:auto;
+  }
+
 }
 
 /* At a phone size */

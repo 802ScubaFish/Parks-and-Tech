@@ -71,8 +71,6 @@ function createPin(place, coords, uid) {
   })
 
   marker.setMap(map);
-
-  
   
 }
 
