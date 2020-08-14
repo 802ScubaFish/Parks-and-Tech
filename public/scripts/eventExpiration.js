@@ -112,7 +112,8 @@ function sortDates(sortedObj) {
       }).catch(function (error) {
         alert(error)
       })
-    } else {
+    } 
+    else {
       // Add all the objects
       eventArray.push(sortedObj[objectId]);
 
@@ -139,8 +140,8 @@ myDb.ref("/Events").once("value", (res) => {
 
   fullEventArray = sortedArray;
 
-  sortedArray.forEach((eventObj) => {
-    // console.log("This is running")
-    displayEvents(eventObj)
+  sortedArray.map((eventObj) => {
+    return displayEvents(eventObj)
   });
+
 })

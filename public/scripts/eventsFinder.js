@@ -16,6 +16,7 @@ let unsortedEventsArray = [];
 
 //Takes an event and adds it to the page
 function eventSearch() {
+
   myDb.ref("/Events").once("value", (res) => {
     displayEvent.innerHTML = "";
     unsortedEventsArray = [];
@@ -141,9 +142,9 @@ function eventSearch() {
     }
 
     // If no filter checkboxes are selected then we return our unchanged global event variable to re-display the full events list
-    if(unsortedEventsArray.length === 0){
+    if (unsortedEventsArray.length === 0) {
 
-     fullEventArray.forEach((eventObj) => {
+      fullEventArray.forEach((eventObj) => {
 
         displayEvents(eventObj);
 
@@ -162,12 +163,13 @@ function eventSearch() {
       });
 
       uniqueObj = sortDates(uniqueObj)
-      
-        // Display any non duplicated objects
-        uniqueObj.forEach((obj) => {
-          displayEvents(obj)
-        })
-      
+
+      // Display any non duplicated objects
+      uniqueObj.forEach((obj) => {
+        displayEvents(obj)
+
+      })
+
       closeEventsModal()
     }
     removeDuplicateData(unsortedEventsArray)
