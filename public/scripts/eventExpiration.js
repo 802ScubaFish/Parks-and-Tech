@@ -15,11 +15,13 @@ function displayEvents(obj) {
   // Each of the event list items variables
   let eventNames = `<div class="eventName">${obj["eventName"]}</div>`; //we added a class to each event name on this line so we can target them with css styling.
   let eventDesc = `<div class='eventDesc'>${obj["eventDesc"]}</div>`;
-  let sortedEventDate = `<div>Date: ${obj["eventDate"]}</div>`;
+  let sortedEventDate = `<div>Date: ${convertDate(obj["eventDate"])}</div>`;
   let eventStatus = `<div>Covid Status: ${obj["eventStatus"]}</div>`;
   let eventTime = `<div>Event Time: ${convertTime(obj["eventTime"])} </div>`;
   let eventLoc = `<div>Event Location: ${obj["eventLoc"]}</div>`;
 
+  console.log(Date(Date.parse(obj['eventDate'])))
+  
   // Append each event item to the singleContainer un-ordered list element
   singleContainer.innerHTML += eventNames;
   singleContainer.innerHTML += eventDesc;
@@ -28,13 +30,18 @@ function displayEvents(obj) {
   singleContainer.innerHTML += eventTime;
   singleContainer.innerHTML += eventLoc;
 
-console.log(obj['eventDate'])
   // Append the single container un-ordered list with all the included list elements to the index.html doc
   // only append if we are on the home page 'index.html'
   if (window.location.pathname.split('/')[1] === "index.html" || window.location.pathname.split('/')[1] === "") {
     displayEvent.append(singleContainer);
   }
   convertTime(obj['eventTime'])
+  convertDate(Date(Date.parse(obj['eventDate'])))
+}
+
+function convertDate(dateString) {
+  let stringDate = dateString.split(' ')
+  console.log(stringDate)
 }
 
 function convertTime(string) {
