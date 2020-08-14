@@ -24,7 +24,6 @@ function displayEvents(obj) {
   // Sets up the main container for all the event list items
   let singleContainer = document.createElement(`div`);
   singleContainer.classList.add("singleEventContainer"); //this line adds a class to each of the events so we can target them with css styling
-  console.log(obj)
 
   let iconString = ""
   for (let icon in iconList) {
