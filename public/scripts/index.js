@@ -128,7 +128,7 @@ function resetFilters() {
 }
 
 //Get the button:
-toTop = document.getElementById("toTop");
+let toTop = document.getElementById("toTop");
 
 // When the user scrolls down 20px from the top of the document, show the to Top button
 window.onscroll = function() {scrollFunction()};
