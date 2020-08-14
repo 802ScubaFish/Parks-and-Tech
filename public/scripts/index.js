@@ -4,6 +4,16 @@ let map;
 var activeInfoWindow;
 let markersArray = [];
 
+let facilityIconList = {
+  beach: "beach_access",
+  park: "eco",
+  playground: "format_strikethrough",
+  dogPark: "pets",
+  bikingFacilities: "directions_bike",
+  hiking: "directions_walk",
+  basketball: "sports_basketball",
+  fields: "tablet",
+}
 // Creates the map and centers on Vermont
 function initMap() {
   map = new google.maps.Map(document.getElementById("map"), {
@@ -40,23 +50,34 @@ function initMap() {
         lng: parseFloat(dbObj["long"])
         
       };
-     
+      
+      let facilityIconString = ""
+      for (let icon in facilityIconList) {
+        
+        if(dbObj[icon]){
+        if (dbObj[icon].length !== 0) {
+          facilityIconString += `<i class="material-icons">${facilityIconList[icon]}</i>`
+        }
+      }
+    }
       //only creates pins for facilities with lat and long entered
       if (myLatLng.lat != "" || myLatLng.long != "") {
-        createPin(dbObj, myLatLng, object[objectId]["uid"])
-        
+        createPin(dbObj, myLatLng, object[objectId]["uid"], facilityIconString)
       }
     }
   });
 }
 
 
+
 // creates infoWindow content for marker and places marker on map
-function createPin(place, coords, uid) {
+function createPin(place, coords, uid, facilityIconString) {
+
+
 
   //allows name of facility to act as link
   let pinContent =
-    `<div class= "pin-info"><a href = '${place["website"]}'>${place["facilityName"]}</a>`
+    `<div class= "pin-info"><a href = '${place["website"]}'>${place["facilityName"]}</a>${facilityIconString}`
 
   //uses google's established constructor for infoWindown
   var infoWindow = new google.maps.InfoWindow({
@@ -146,9 +167,7 @@ function resetFilters() {
 let toTop = document.getElementById("toTop");
 
 // When the user scrolls down 20px from the top of the document, show the to Top button
-window.onscroll = function () {
-  scrollFunction()
-};
+window.onscroll = function () { scrollFunction() };
 
 function scrollFunction() {
   if (document.body.scrollTop > 20 || document.documentElement.scrollTop > 20) {

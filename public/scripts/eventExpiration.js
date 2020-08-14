@@ -6,6 +6,7 @@ let fullEventArray = []
 let eventDate;
 let displayEvent = document.getElementById("displayEvent");
 
+//matches icons with event types
 let iconList = {
   biking: "pedal_bike",
   education: "local_library",
@@ -25,6 +26,7 @@ function displayEvents(obj) {
   let singleContainer = document.createElement(`div`);
   singleContainer.classList.add("singleEventContainer"); //this line adds a class to each of the events so we can target them with css styling
 
+  //selects icons of checked boxes 
   let iconString = ""
   for (let icon in iconList) {
     if (obj[icon].length !== 0) {
