@@ -32,6 +32,7 @@ function displayEvents(obj) {
       iconString += `<i class="material-icons">${iconList[icon]}</i>`
     }
   }
+  
   // Each of the event list items variables
   let eventNames = `<div class="eventName">${obj["eventName"]} ${iconString}</div>`; //we added a class to each event name on this line so we can target them with css styling.
   let eventDesc = `<div class='eventDesc'>${obj["eventDesc"]}</div>`;
