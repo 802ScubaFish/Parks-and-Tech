@@ -34,10 +34,19 @@ function displayEvents(obj) {
     }
   }
 
+  //Takes the event date and parses the date so it is in correct Day, Month, Year format
+  let milliseconds =(Date.parse(obj['eventDate']));
+  const dateObject = new Date(milliseconds);
+  let dateObjString = dateObject.toString();
+  let stringDate = dateObjString.split(' ');
+  // return the month date and year from the string formatted
+  let parsedDate = stringDate[1] + ' ' + stringDate[2] + ' ' + stringDate[3] + ' '
+  
+
   // Each of the event list items variables
   let eventNames = `<div id="eventsName">${obj["eventName"]}&nbsp;${iconString}</div>`; //we added a class to each event name on this line so we can target them with css styling.
   let eventDesc = `<div class='eventClass' id='eventDesc'>${obj["eventDesc"]}</div>`;
-  let sortedEventDate = `<div class='eventClass'>Date: ${convertDate(Date(Date.parse(obj['eventDate'])))}</div>`;
+  let sortedEventDate = `<div class='eventClass'>Date: ${parsedDate}</div>`;
   let eventStatus = `<div class='eventClass'>Covid Status: ${obj["eventStatus"]}</div>`;
   let eventTime = `<div class='eventClass'>Event Time: ${convertTime(obj["eventTime"])} </div>`;
   let eventLoc = `<div class='eventClass'>Event Location: ${obj["eventLoc"]}</div>`;
@@ -57,18 +66,12 @@ function displayEvents(obj) {
   if (window.location.pathname.split('/')[1] === "index.html" || window.location.pathname.split('/')[1] === "") {
     displayEvent.append(singleContainer);
   }
-  convertTime(obj['eventTime'])
+  convertTime(obj['eventTime']);
+
+ 
+
 }
 
-// Function to format date to day/month/year 
-function convertDate(dateString) {
-  // return date string split
-  let stringDate = dateString.split(' ');
-  // return the month date and year from the string formatted
-  let spiltDateString = stringDate[1] + ' ' + stringDate[2] + ' ' + stringDate[3] + ' '
-  // return the formated dates to be displayed to the page
-  return spiltDateString
-}
 
 // Function to format time and logic to add AM/PM
 function convertTime(string) {
