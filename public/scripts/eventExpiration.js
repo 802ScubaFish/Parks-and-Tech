@@ -35,12 +35,12 @@ function displayEvents(obj) {
   // Each of the event list items variables
   let eventNames = `<div class="eventName">${obj["eventName"]} ${iconString}</div>`; //we added a class to each event name on this line so we can target them with css styling.
   let eventDesc = `<div class='eventDesc'>${obj["eventDesc"]}</div>`;
-  let sortedEventDate = `<div>Date: ${convertDate(obj["eventDate"])}</div>`;
+  let sortedEventDate = `<div>Date: ${convertDate(Date(Date.parse(obj['eventDate'])))}</div>`;
   let eventStatus = `<div>Covid Status: ${obj["eventStatus"]}</div>`;
   let eventTime = `<div>Event Time: ${convertTime(obj["eventTime"])} </div>`;
   let eventLoc = `<div>Event Location: ${obj["eventLoc"]}</div>`;
 
-  console.log(Date(Date.parse(obj['eventDate'])))
+  // console.log(Date(Date.parse(obj['eventDate'])))
   
   // Append each event item to the singleContainer un-ordered list element
   singleContainer.innerHTML += eventNames;
@@ -56,13 +56,13 @@ function displayEvents(obj) {
     displayEvent.append(singleContainer);
   }
   convertTime(obj['eventTime'])
-  convertDate(Date(Date.parse(obj['eventDate'])))
 }
 
 function convertDate(dateString) {
   let stringDate = dateString.split(' ');
   let spiltDateString = stringDate[1] + ' ' + stringDate[2] + ' ' + stringDate[3] + ' '
-  console.log(spiltDateString)
+
+  return spiltDateString
 }
 
 function convertTime(string) {
