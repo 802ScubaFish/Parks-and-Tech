@@ -2,8 +2,18 @@
 
 let map;
 var activeInfoWindow;
-let markersArray=[];
+let markersArray = [];
 
+let facilityIconList = {
+  beach: "beach_access",
+  park: "eco",
+  playground: "format_strikethrough",
+  dogPark: "pets",
+  bikingFacilities: "directions_bike",
+  hiking: "directions_walk",
+  basketball: "sports_basketball",
+  fields: "tablet",
+}
 // Creates the map and centers on Vermont
 function initMap() {
   map = new google.maps.Map(document.getElementById("map"), {
@@ -18,17 +28,26 @@ function initMap() {
   //Grabs the lat and lng from the database. Adds all facilities to map. 
   myDb.ref("/Facilities").once("value", (res) => {
     const object = res.val();
-   
+
     for (const objectId in object) {
       var dbObj = object[objectId]
       var myLatLng = {
         lat: parseFloat(dbObj["lat"]),
         lng: parseFloat(dbObj["long"])
       };
-
+      
+      let facilityIconString = ""
+      for (let icon in facilityIconList) {
+        
+        if(dbObj[icon]){
+        if (dbObj[icon].length !== 0) {
+          facilityIconString += `<i class="material-icons">${facilityIconList[icon]}</i>`
+        }
+      }
+    }
       //only creates pins for facilities with lat and long entered
       if (myLatLng.lat != "" || myLatLng.long != "") {
-        createPin(dbObj, myLatLng, object[objectId]["uid"])
+        createPin(dbObj, myLatLng, object[objectId]["uid"], facilityIconString)
       }
     }
 
@@ -36,12 +55,15 @@ function initMap() {
 }
 
 
+
 // creates infoWindow content for marker and places marker on map
-function createPin(place, coords, uid) {
+function createPin(place, coords, uid, facilityIconString) {
+
+
 
   //allows name of facility to act as link
   let pinContent =
-    `<div class= "pin-info"><a href = '${place["website"]}'>${place["facilityName"]}</a>`
+    `<div class= "pin-info"><a href = '${place["website"]}'>${place["facilityName"]}</a>${facilityIconString}`
 
   //uses google's established constructor for infoWindown
   var infoWindow = new google.maps.InfoWindow({
@@ -53,25 +75,25 @@ function createPin(place, coords, uid) {
     uid: uid
   });
 
-   markersArray.push(marker)
-   
+  markersArray.push(marker)
 
-  
+
+
   //Allows links to pop up when hovered over and disappear when user moves mouse to another pin
   marker.addListener("click", function () {
-    
-    
+
+
     if (activeInfoWindow) {
       activeInfoWindow.close()
     }
     infoWindow.open(map, marker)
     activeInfoWindow = infoWindow
 
-    
+
   })
 
   marker.setMap(map);
-  
+
 }
 
 // Opens the Events Modal
@@ -131,7 +153,7 @@ function resetFilters() {
 toTop = document.getElementById("toTop");
 
 // When the user scrolls down 20px from the top of the document, show the to Top button
-window.onscroll = function() {scrollFunction()};
+window.onscroll = function () { scrollFunction() };
 
 function scrollFunction() {
   if (document.body.scrollTop > 20 || document.documentElement.scrollTop > 20) {
