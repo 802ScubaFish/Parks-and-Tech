@@ -8,10 +8,10 @@ let markersArray = [];
 function initMap() {
   map = new google.maps.Map(document.getElementById("map"), {
     center: {
-      lat: 44.0,
-      lng: -72.,
+      lat: 44.1,
+      lng: -72.6,
     },
-    zoom: 7,
+    zoom: 7.1,
   });
 
   var vtBoundsCoords = coordinates

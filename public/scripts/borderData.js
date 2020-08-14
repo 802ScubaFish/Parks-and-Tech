@@ -1,3 +1,4 @@
+// This file brings in the coords to create a border around the map of Vermont
 let coordinates = [
     [-73.35218221090553, 45.00541896831666],
     [-73.18201496808604, 45.00562770855899],
@@ -80,6 +81,7 @@ let coordinates = [
     [-73.35218221090553, 45.00541896831666]
 ]
 
+// Takes the coordinates 'array of arrays' and converts it to an 'array of objects' (Google Maps only accepts an array of objects)
 function borderArray() {
     coordinates = coordinates.map((latLngArr) => {
         return {

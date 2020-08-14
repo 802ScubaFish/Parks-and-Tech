@@ -33,12 +33,12 @@ function displayEvents(obj) {
   }
 
   // Each of the event list items variables
-  let eventNames = `<div class="eventName">${obj["eventName"]} ${iconString}</div>`; //we added a class to each event name on this line so we can target them with css styling.
-  let eventDesc = `<div class='eventDesc'>${obj["eventDesc"]}</div>`;
-  let sortedEventDate = `<div>Date: ${convertDate(Date(Date.parse(obj['eventDate'])))}</div>`;
-  let eventStatus = `<div>Covid Status: ${obj["eventStatus"]}</div>`;
-  let eventTime = `<div>Event Time: ${convertTime(obj["eventTime"])} </div>`;
-  let eventLoc = `<div>Event Location: ${obj["eventLoc"]}</div>`;
+  let eventNames = `<div id="eventsName">${obj["eventName"]}&nbsp;${iconString}</div>`; //we added a class to each event name on this line so we can target them with css styling.
+  let eventDesc = `<div class='eventClass' id='eventDesc'>${obj["eventDesc"]}</div>`;
+  let sortedEventDate = `<div class='eventClass'>Date: ${convertDate(Date(Date.parse(obj['eventDate'])))}</div>`;
+  let eventStatus = `<div class='eventClass'>Covid Status: ${obj["eventStatus"]}</div>`;
+  let eventTime = `<div class='eventClass'>Event Time: ${convertTime(obj["eventTime"])} </div>`;
+  let eventLoc = `<div class='eventClass'>Event Location: ${obj["eventLoc"]}</div>`;
 
   // console.log(Date(Date.parse(obj['eventDate'])))
 
@@ -112,8 +112,7 @@ function sortDates(sortedObj) {
       }).catch(function (error) {
         alert(error)
       })
-    } 
-    else {
+    } else {
       // Add all the objects
       eventArray.push(sortedObj[objectId]);
 
@@ -131,16 +130,15 @@ function sortDates(sortedObj) {
 }
 
 
-
 myDb.ref("/Events").once("value", (res) => {
   const object = res.val();
 
-  // Sorts and builds our fullEventArray that we keep constant to use in the events filter
-  sortDates(object)
+  // Saves, sorts and builds our fullEventArray that we keep constant to use in the events filter
+  let sortDatesVar = sortDates(object)
 
-  fullEventArray = sortedArray;
+  fullEventArray = sortedArray; // <- side effect of database call, check logic here *
 
-  sortedArray.map((eventObj) => {
+  sortDatesVar.map((eventObj) => {
     return displayEvents(eventObj)
   });
 

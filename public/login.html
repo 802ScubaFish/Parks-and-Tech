@@ -12,7 +12,7 @@
 <body>
     <!-- If the user is logged in, they see a login Form -->
     <div id="loginDiv" class="mainDiv">
-        <h1>Welcome, please login</h1>
+        <h1 id='loginTitle'>Welcome, please login</h1>
         <a href="/index.html"><img id='logo' src="/imgs/VRPA_logo_color.jpg" alt="VRPA logo"></a>
         <div class="logInContainer">
 
@@ -29,7 +29,7 @@
     <div id="userDiv" class="loggedInDiv">
         <h1>Welcome to the Parks App</h1>
         <a href="/index.html"><img id='logo' src="/imgs/VRPA_logo_color.jpg" alt="VRPA logo"></a>
-        <div id='logInButtons'>
+        <div id='loginButtons'>
             <button class="styledButtons" onClick='displayEventForm()'>Create New Event</button>
             <button class="styledButtons" onClick='displayFacilityForm()'>Create New Facility</button>
             <button onClick="logout()" class="styledButtons">Logout</button>
@@ -39,12 +39,12 @@
     <div id='wholeEventForm'>
         <h1>Create New Event Form</h1>
         <form id='eventForm'>
+            
             <label class='eventClass'>Event Name
                 <input class="eventInputs" type="text" id="eventName" /></label>
 
             <label class='eventClass'>Event Date
                 <input class="eventInputs" type="date" id="eventDate" /></label>
-
 
             <label class='eventClass'>Event Time
                 <input class="eventInputs" type="time" id="eventTime" /></label>
@@ -57,9 +57,6 @@
 
             <label class='eventClass'>Event Covid Status
                 <input class="eventInputs" type='text' id="eventStatus" /></label>
-
-
-
 
 
             <!-- Check to Select Event Features Checkboxes -->
