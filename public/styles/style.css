@@ -267,10 +267,8 @@ main {
   display: flex;
   justify-content: center;
   align-items: center;
-  background-color:
-    /*#f37521 */
-    #d8d9d8;
-  font-size: 150%;
+  background-color:#d8d9d8;
+  font-size: 125%;
   width: 100vw;
   height: 6vh;
   margin-top: 0;
