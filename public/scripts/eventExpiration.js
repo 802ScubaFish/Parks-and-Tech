@@ -24,7 +24,7 @@ function displayEvents(obj) {
   // Sets up the main container for all the event list items
   let singleContainer = document.createElement(`div`);
   singleContainer.classList.add("singleEventContainer"); //this line adds a class to each of the events so we can target them with css styling
-  console.log(obj)
+
 
   let iconString = ""
   for (let icon in iconList) {
@@ -36,7 +36,7 @@ function displayEvents(obj) {
   // Each of the event list items variables
   let eventNames = `<div class="eventName">${obj["eventName"]} ${iconString}</div>`; //we added a class to each event name on this line so we can target them with css styling.
   let eventDesc = `<div class='eventDesc'>${obj["eventDesc"]}</div>`;
-  let sortedEventDate = `<div>Date: ${convertDate(obj["eventDate"])}</div>`;
+  let sortedEventDate = `<div>Date: ${(obj["eventDate"])}</div>`;
   let eventStatus = `<div>Covid Status: ${obj["eventStatus"]}</div>`;
   let eventTime = `<div>Event Time: ${convertTime(obj["eventTime"])} </div>`;
   let eventLoc = `<div>Event Location: ${obj["eventLoc"]}</div>`;

@@ -62,6 +62,7 @@ function displayEventForm() {
 
 function displayFacilityForm() {
 
+  eventForm.style.display ="none"
 
   if (!facilityForm.style.display) {
     facilityForm.style.display = "block";
