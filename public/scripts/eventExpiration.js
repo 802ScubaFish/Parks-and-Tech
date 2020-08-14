@@ -60,8 +60,9 @@ function displayEvents(obj) {
 }
 
 function convertDate(dateString) {
-  let stringDate = dateString.split(' ')
-  console.log(stringDate)
+  let stringDate = dateString.split(' ');
+  let spiltDateString = stringDate[1] + ' ' + stringDate[2] + ' ' + stringDate[3] + ' '
+  console.log(spiltDateString)
 }
 
 function convertTime(string) {
