@@ -40,7 +40,7 @@ function displayEvents(obj) {
   let dateObjString = dateObject.toString();
   let stringDate = dateObjString.split(' ');
   // return the month date and year from the string formatted
-  let parsedDate = stringDate[1] + ' ' + stringDate[2] + ' ' + stringDate[3] + ' '
+  let parsedDate = stringDate[1] + ' ' + stringDate[2] + ', ' + stringDate[3] + ' '
   
 
   // Each of the event list items variables
