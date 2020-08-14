@@ -102,4 +102,6 @@ function submitFacility() {
   //Opens the connection to the database and sets the object to the database
   myDb.ref(`/Facilities/facility_${uid}`).set(formObj);
   document.getElementById("facilitiesForm").reset();
+
+  alert('Thank you for Submitting your Facility!')
 }

@@ -5,31 +5,33 @@ body {
 
 
 /*  Buttons */
-.styledButtons{
-    display:inline-block;
-    padding:0.5em 3em;
-    border:0.16em solid #FFFFFF;
-    margin:0 0.3em 0.3em 0;
+.styledButtons {
+    display: inline-block;
+    padding: 0.5em 3em;
+    border: 0.16em solid #FFFFFF;
+    margin: 0 0.3em 0.3em 0;
     box-sizing: border-box;
-    text-decoration:none;
-    text-transform:uppercase;
-    font-family:'Roboto',sans-serif;
-    font-weight:400;
+    text-decoration: none;
+    text-transform: uppercase;
+    font-family: 'Roboto', sans-serif;
+    font-weight: 400;
     background-color: #68c88d;
-    color:white;
-    text-align:center;
+    color: white;
+    text-align: center;
     transition: all 0.15s;
-    }
-    .styledButtons:hover{
-    color:#93d8ae;
-    border-color:#DDDDDD;
-    }
-    .styledButton:active{
-    color:#225d39;
-    border-color:#BBBBBB;
-    }
+}
 
-    .logInField {
+.styledButtons:hover {
+    color: #93d8ae;
+    border-color: #DDDDDD;
+}
+
+.styledButton:active {
+    color: #225d39;
+    border-color: #BBBBBB;
+}
+
+.logInField {
     font-size: 120%;
 }
 
@@ -44,8 +46,8 @@ body {
 }
 
 
-#logInButtons {
-    width:100%;
+#loginButtons {
+    width: 100%;
     justify-content: center;
     margin: auto;
     display: flex;
@@ -55,8 +57,8 @@ body {
 
 
 #logo {
-    height:100px;
-    width:100px;
+    height: 100px;
+    width: 100px;
     margin: auto;
     display: flex;
     justify-content: center;
@@ -69,7 +71,7 @@ h1 {
     text-align: center;
 }
 
-  
+
 .logInContainer {
     display: flex;
     flex-direction: column;
@@ -80,11 +82,11 @@ h1 {
 }
 
 
- #wholeEventForm{
+#wholeEventForm {
     display: none;
     width: 50vw;
     margin: auto
-} 
+}
 
 
 #eventForm {
@@ -128,7 +130,7 @@ h1 {
     display: none;
     width: 50vw;
     margin: auto;
-} 
+}
 
 
 #facilitiesForm {
@@ -151,9 +153,9 @@ h1 {
 }
 
 
-#check-facilities{
+#check-facilities {
     font-size: 4vh;
-    
+
 }
 
 
@@ -161,4 +163,38 @@ h1 {
     display: flex;
     justify-content: center;
     width: 100%;
+}
+
+
+/* At a desktop size */
+@media screen and (min-width: 700px) {}
+
+/* At a phone size */
+@media screen and (max-width: 750px) {
+
+    #loginDiv {
+        margin-top: 20vh;
+    }
+
+    #loginButtons {
+        display: flex;
+        flex-direction: column;
+    }
+
+    #wholeEventForm {
+        width: 95%;
+    }
+
+    #wholeFacilityForm {
+        width: 95%
+    }
+
+    .eventInputs {
+        width: 50%;
+
+    }
+
+    .facilityInputs {
+        width: 40%;
+    }
 }

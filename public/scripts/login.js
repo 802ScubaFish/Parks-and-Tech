@@ -48,7 +48,7 @@ function logout() {
 
 function displayEventForm() {
 
-  
+  facilityForm.style.display = 'none'
 
   if (!eventForm.style.display) {
     eventForm.style.display = "block";
