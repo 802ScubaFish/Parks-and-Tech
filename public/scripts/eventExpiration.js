@@ -31,7 +31,7 @@ function displayEvents(obj) {
       iconString += `<i class="material-icons">${iconList[icon]}</i>`
     }
   }
-  
+
   // Each of the event list items variables
   let eventNames = `<div class="eventName">${obj["eventName"]} ${iconString}</div>`; //we added a class to each event name on this line so we can target them with css styling.
   let eventDesc = `<div class='eventDesc'>${obj["eventDesc"]}</div>`;
@@ -41,7 +41,7 @@ function displayEvents(obj) {
   let eventLoc = `<div>Event Location: ${obj["eventLoc"]}</div>`;
 
   // console.log(Date(Date.parse(obj['eventDate'])))
-  
+
   // Append each event item to the singleContainer un-ordered list element
   singleContainer.innerHTML += eventNames;
   singleContainer.innerHTML += eventDesc;
@@ -58,29 +58,38 @@ function displayEvents(obj) {
   convertTime(obj['eventTime'])
 }
 
+// Function to format date to day/month/year 
 function convertDate(dateString) {
+  // return date string split
   let stringDate = dateString.split(' ');
+  // return the month date and year from the string formatted
   let spiltDateString = stringDate[1] + ' ' + stringDate[2] + ' ' + stringDate[3] + ' '
-
+  // return the formated dates to be displayed to the page
   return spiltDateString
 }
 
+// Function to format time and logic to add AM/PM
 function convertTime(string) {
-
-  let stringTime = string.split(':')[0]
+  // split all event times on the ':' and then grab the first half
+  let stringTime = string.split(':')[0];
   let stringTimeMinutes = string.split(":")[1]
   let totalTime;
 
+  // Convert string to number
   parsedTime = parseInt(stringTime)
 
+  // If the number is greater than 12 we add PM and convert out of military time
   if (parsedTime > 12) {
     parsedTime = parsedTime - 12
     totalTime = parsedTime + ":" + stringTimeMinutes +
       "PM"
-  } else if (parsedTime < 12) {
+  }
+  // If the number is less than 12 we add AM
+  else if (parsedTime < 12) {
     totalTime = parsedTime + ":" + stringTimeMinutes +
       "AM"
   }
+  // Return the new formated times to be displayed in the Events section
   return totalTime
 
 }
