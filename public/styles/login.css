@@ -122,9 +122,7 @@ h1 {
 
 .eventInputs {
     width: 11.675vw;
-
 }
-
 
 #wholeFacilityForm {
     display: none;
@@ -165,6 +163,11 @@ h1 {
     width: 100%;
 }
 
+#latLngButton {
+    font-size: 80%;
+    margin-left: 2vw;
+}
+
 
 /* At a desktop size */
 @media screen and (min-width: 700px) {}
@@ -187,14 +190,5 @@ h1 {
 
     #wholeFacilityForm {
         width: 95%
-    }
-
-    .eventInputs {
-        width: 50%;
-
-    }
-
-    .facilityInputs {
-        width: 40%;
     }
 }
