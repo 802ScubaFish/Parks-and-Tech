@@ -16,16 +16,15 @@
   <!-- Adds google maps polyfill-->
   <script src="https://polyfill.io/v3/polyfill.min.js?features=default"></script>
   <link rel="stylesheet" href="/styles/style.css">
-  
+
   <!-- The core Firebase JS SDK is always required and must be listed first -->
   <script src="https://www.gstatic.com/firebasejs/7.17.1/firebase-app.js"></script>
-  
+
   <!-- TODO: Add SDKs for Firebase products that you want to use -->
   <script src="https://www.gstatic.com/firebasejs/7.17.1/firebase-analytics.js"></script>
-  
+
   <!-- icon import below -->
-  <link href="https://fonts.googleapis.com/icon?family=Material+Icons"
-      rel="stylesheet">
+  <link href="https://fonts.googleapis.com/icon?family=Material+Icons" rel="stylesheet">
 </head>
 
 <body>
@@ -90,14 +89,79 @@
     </div>
   </div>
 
+<!-- Icons Key Modal -->
+<div id="iconsModal">
+  <button class='styledButtons' id='buttonMargin' onClick='closeIconsModal()' class="close">Close</button>
+  <h1 class="center">Icons Key</h1>
+  <div id="athleticFields">
+    <i class="material-icons">tablet</i> = Athletic fields
+  </div>
+  <div id="basketball">
+    <i class="material-icons">sports_basketball</i> = Baketball Courts
+  </div>
+  <div id="beach">
+    <i class="material-icons">beach_access</i> = Beach Access
+  </div>
+  <div id="biking">
+    <i class="material-icons">pedal_bike</i> = Biking
+  </div>
+  <div id="dogpark">
+    <i class="material-icons">pets</i> =Dog Park
+  </div>
+  <div id="education">
+    <i class="material-icons">local_library</i> =Education
+  </div>
+  <div id="fair">
+    <i class="material-icons">local_play</i> = Fair
+  </div>
+  <div id="hiking">
+    <i class="material-icons">directions_walk</i> = Hiking
+  </div>
+  <div id="holiday">
+    <i class="material-icons">cake</i> = Holiday
+  </div>
+  <div id="indoors">
+    <i class="material-icons">home_work</i> = Indoors
+  </div>
+  <div id="nature">
+    <i class="material-icons">eco</i> = Nature
+  </div>
+  <div id="outdoors">
+    <i class="material-icons">terrain</i> = Outdoors
+  </div>
+  <div id="park">
+    <i class="material-icons">eco</i> = Park
+  </div>
+  <div id="playground">
+    <i class="material-icons">format_strikethrough</i> = Playground
+  </div>
+  <div id="running">
+    <i class="material-icons">directions_run</i> = Running
+  </div>
+  <div id="sporting">
+    <i class="material-icons">sports_soccer</i> = Sporting
+  </div>
+  <div id="swimming">
+    <i class="material-icons">pool</i> = Swimming
+  </div>
+</div>
+
   <!--Donate Bar-->
   <div id="donate"><a href="https://www.vrpa.org/donate"><b>DONATIONS</b></a>
   </div>
-  
-    <div id="adminLogIn">
-      <a id="adminLogInText" href="/login.html">
-        Admin Log In</a>
+
+  <div id="adminLogIn">
+    <a id="adminLogInText" href="/login.html">
+      Admin Log In</a>
+  </div>
+
+  <!--Header-->
+  <div id="topBanner">
+    <a href="https://www.vrpa.org/"><img id='headerLogo' src="/imgs/VRPA_logo_color.jpg" alt="VRPA logo"></a>
+    <div id="navDonateButton">
+      <div id="title">Find Your Fun!</div>
     </div>
+  </div>
 
     <!--Header-->
     <div id="topBanner">
@@ -105,25 +169,25 @@
       <div id="navDonateButton">
         <div id="title"><b>Find Your Fun!</b></div>
       </div>
+  <div id='welcomeMessageBackground'>
+    <div id="welcomeMessage">Welcome to the Vermont Recreation & Parks Association event & facility search site. Use
+      this
+      site to find local parks & events throughout the state of Vermont.
     </div>
- 
-<div id='welcomeMessageBackground'>
-  <div id="welcomeMessage">Welcome to the Vermont Recreation & Parks Association event & facility search site. Use this
-    site to find local parks & events throughout the state of Vermont.
   </div>
-</div>
 
   <!-- Search Bar -->
   <div id='searchBarBackground'>
-  <div id='searchBar'>
-    <h4 id='searchTitle'>Search By:</h4>
-    <div id='searchButtons'>
-      <button class='styledButtons' id='searchEvents' onClick='eventsFilter()'>Events</button>
-      <button class='styledButtons' id='searchFacilities' onClick='facilitiesFilter()'>Facilities</button>
-      <button class='styledButtons' onClick="resetFilters()">Reset Filters</button>
+    <div id='searchBar'>
+      <h4 id='searchTitle'>Search By:</h4>
+      <div id='searchButtons'>
+        <button class='styledButtons' id='searchEvents' onClick='eventsFilter()'>Events</button>
+        <button class='styledButtons' id='searchFacilities' onClick='facilitiesFilter()'>Facilities</button>
+        <button class='styledButtons' onClick="resetFilters()">Reset Filters</button>
+        <button class="styledButtons" onClick="iconsKey()">Icons Key</button>
+      </div>
     </div>
   </div>
-</div>
 
   <!--Map Content-->
   <main>
@@ -171,7 +235,7 @@
 
         </div>
       </div>
-      <button onClick="topFunction()" id="toTop" title="Go to top">Top</button> 
+      <button onClick="topFunction()" id="toTop" title="Go to top">Top</button>
   </main>
 
   <!-- Connects to Javascript files -->

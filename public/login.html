@@ -39,25 +39,26 @@
     <div id='wholeEventForm'>
         <h1>Create New Event Form</h1>
         <form onsubmit='submitEvent()' id='eventForm'>
-            
-            <label class='eventClass'>Event Name
-                <input class="eventInputs" type="text" id="eventName" required/></label>
 
-            <label class='eventClass'>Event Date
-                <input class="eventInputs" type="date" id="eventDate" required/></label>
+            <label class='eventClass'>Event Name *
+                <input class="eventInputs" type="text" id="eventName" required /></label>
 
-            <label class='eventClass'>Event Time
-                <input class="eventInputs" type="time" id="eventTime" required/></label>
+            <label class='eventClass'>Event Date *
+                <input class="eventInputs" type="date" id="eventDate" required /></label>
 
-            <label class='eventClass'>Event Description
-                <input class="eventInputs" type="text" id="eventDesc" required/></label>
+            <label class='eventClass'>Event Time *
+                <input class="eventInputs" type="time" id="eventTime" required /></label>
 
-            <label class='eventClass'>Event Location
-                <input class="eventInputs" type='text' id="eventLoc" required/></label>
+            <label class='eventClass'>Event Description *
+                <input class="eventInputs" type="textarea" id="eventDesc" required /></label>
 
-            <label class='eventClass'>Event Covid Status
-                <input class="eventInputs" type='text' id="eventStatus" required/></label>
+            <label class='eventClass'>Event Location *
+                <input class="eventInputs" type='text' id="eventLoc" required /></label>
 
+            <label class='eventClass'>Event Covid Status *
+                <input class="eventInputs" type='text' id="eventStatus" required /></label>
+
+            <h6>* = Required Field(s)</h6>
 
             <!-- Check to Select Event Features Checkboxes -->
             <label class='eventClass' for="sporting">Sporting
@@ -98,14 +99,14 @@
     <div id='wholeFacilityForm'>
         <form onsubmit="submitFacility()" id='facilitiesForm'>
             <h1>Add A New Facility</h1>
-            <label class='facilityClass'>Facility Name
-                <input class="facilityInputs" type="text" id="facilityName" required/></label>
+            <label class='facilityClass required'>Facility Name *
+                <input class="facilityInputs" type="text" id="facilityName" required /></label>
 
             <label class='facilityClass'>Location
                 <input class="facilityInputs" type="text" id="location" /></label>
 
             <label class='facilityClass'>Announcements
-                <input class="facilityInputs" type="text" id="announcements" /></label>
+                <input class="facilityInputs" type="textarea" id="announcements" /></label>
 
             <label class='facilityClass'>Facility Contact Info
                 <input class="facilityInputs" type="text" id="contactInfo" /></label>
@@ -113,13 +114,16 @@
             <label class='facilityClass'>Facility Website URL
                 <input class="facilityInputs" type="text" id="website" /></label>
 
-            <label class='facilityClass'>Facility Latitude
-                <input class="facilityInputs" type="text" id="facilityLatitude" required/></label>
+            <label class='facilityClass'>Facility Latitude *
+                <input class="facilityInputs required" type="text" id="facilityLatitude" required /></label>
 
-            <label class='facilityClass'>Facility Longitude
-                <input class="facilityInputs" type="text" id="facilityLongitude" required/></label>
-            <div id="latLngButon">
-                <a href="https://nominatim.openstreetmap.org/ui/search.html"> Find your Latitude and Longitude</a>
+            <label class='facilityClass'>Facility Longitude *
+                <input class="facilityInputs required" type="text" id="facilityLongitude" required /></label>
+
+            <div id="latLngButton">
+                <a href="https://nominatim.openstreetmap.org/ui/search.html">Click Here to Find your
+                    Latitude and Longitude!</a>
+                <h6>* = Required Field(s)</h6>
             </div>
 
             <div id="check-facilities">Check to Select Park Features</div>

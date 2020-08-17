@@ -110,6 +110,25 @@ function createPin(place, coords, uid, facilityIconString) {
 
 }
 
+// Opens the Icon Key Modal
+function iconsKey() {
+
+  var iconsModal = document.getElementById("iconsModal")
+
+  if (!iconsModal.style.display) {
+    iconsModal.style.display = "block";
+  } else if (iconsModal.style.display === 'none') {
+    iconsModal.style.display = "block";
+  } else {
+    iconsModal.style.display = "none";
+  }
+}
+
+// Closes Icons Key Modal
+function closeIconsModal() {
+  iconsModal.style.display = "none";
+}
+
 // Opens the Events Modal
 function eventsFilter() {
 
