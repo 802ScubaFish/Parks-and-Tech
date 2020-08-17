@@ -1,5 +1,24 @@
 // This function will create and array of events from the databse, and then sort them
 
+function showEventsList() {
+
+  eventData.once("value")
+      .then(function (events) {
+          events.forEach(function (event) {
+
+              var name_val = event.val().Name;
+
+              document.getElementById("displayEvent").innerHTML = name_val;
+          });
+      });
+}
+
+
+//--------------------------------------------------Seperate Functionality Below--------------------------------------//
+
+
+// Brings in the displayEvent element from index.html
+eventDisplay = document.getElementById('displayEvent')
 // Create and empty Array to push dates to
 let sortedArray = [];
 let fullEventArray = []
