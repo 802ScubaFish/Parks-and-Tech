@@ -3,6 +3,8 @@
 let map;
 var activeInfoWindow;
 let markersArray = [];
+var eventsModal = document.getElementById("eventsModal");
+var facilityModal = document.getElementById("facilitiesModal");
 
 let facilityIconList = {
   beach: "beach_access",
@@ -131,8 +133,7 @@ function closeIconsModal() {
 
 // Opens the Events Modal
 function eventsFilter() {
-
-  var eventsModal = document.getElementById("eventsModal");
+  facilityModal.style.display = "none";
 
   if (!eventsModal.style.display) {
     eventsModal.style.display = "block";
@@ -152,8 +153,7 @@ function closeEventsModal() {
 
 // Opens the Facilities Modal
 function facilitiesFilter() {
-
-  var facilityModal = document.getElementById("facilitiesModal");
+  eventsModal.style.display = "none";
 
   if (!facilityModal.style.display) {
     facilityModal.style.display = "block";
