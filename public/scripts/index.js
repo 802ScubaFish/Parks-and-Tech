@@ -150,7 +150,6 @@ function closeEventsModal() {
   eventsModal.style.display = "none";
 }
 
-
 // Opens the Facilities Modal
 function facilitiesFilter() {
   eventsModal.style.display = "none";
