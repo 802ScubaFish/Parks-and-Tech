@@ -35,7 +35,7 @@ function displayEvents(obj) {
   }
 
   //Takes the event date and parses the date so it is in correct Day, Month, Year format
-  let milliseconds =(Date.parse(obj['eventDate']));
+  let milliseconds =(Date.parse(obj['eventDate'])+  86400000);
   const dateObject = new Date(milliseconds);
   let dateObjString = dateObject.toString();
   let stringDate = dateObjString.split(' ');
