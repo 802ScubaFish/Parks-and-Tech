@@ -38,25 +38,25 @@
 
     <div id='wholeEventForm'>
         <h1>Create New Event Form</h1>
-        <form id='eventForm'>
+        <form onsubmit='submitEvent()' id='eventForm'>
             
             <label class='eventClass'>Event Name
-                <input class="eventInputs" type="text" id="eventName" /></label>
+                <input class="eventInputs" type="text" id="eventName" required/></label>
 
             <label class='eventClass'>Event Date
-                <input class="eventInputs" type="date" id="eventDate" /></label>
+                <input class="eventInputs" type="date" id="eventDate" required/></label>
 
             <label class='eventClass'>Event Time
-                <input class="eventInputs" type="time" id="eventTime" /></label>
+                <input class="eventInputs" type="time" id="eventTime" required/></label>
 
             <label class='eventClass'>Event Description
-                <input class="eventInputs" type="text" id="eventDesc" /></label>
+                <input class="eventInputs" type="text" id="eventDesc" required/></label>
 
             <label class='eventClass'>Event Location
-                <input class="eventInputs" type='text' id="eventLoc" /></label>
+                <input class="eventInputs" type='text' id="eventLoc" required/></label>
 
             <label class='eventClass'>Event Covid Status
-                <input class="eventInputs" type='text' id="eventStatus" /></label>
+                <input class="eventInputs" type='text' id="eventStatus" required/></label>
 
 
             <!-- Check to Select Event Features Checkboxes -->
@@ -88,7 +88,7 @@
                 <input class="eventInputs" type="checkbox" id="education" name="eventFeature" /></label>
 
             <div>
-                <button class='styledButtons' onClick="submitEvent()">Submit Event</button>
+                <button class='styledButtons'>Submit Event</button>
             </div>
 
         </form>
@@ -96,10 +96,10 @@
 
     <!-- Add a facility form  -->
     <div id='wholeFacilityForm'>
-        <form id='facilitiesForm'>
+        <form onsubmit="submitFacility()" id='facilitiesForm'>
             <h1>Add A New Facility</h1>
             <label class='facilityClass'>Facility Name
-                <input class="facilityInputs" type="text" id="facilityName" /></label>
+                <input class="facilityInputs" type="text" id="facilityName" required/></label>
 
             <label class='facilityClass'>Location
                 <input class="facilityInputs" type="text" id="location" /></label>
@@ -114,10 +114,10 @@
                 <input class="facilityInputs" type="text" id="website" /></label>
 
             <label class='facilityClass'>Facility Latitude
-                <input class="facilityInputs" type="text" id="facilityLatitude" /></label>
+                <input class="facilityInputs" type="text" id="facilityLatitude" required/></label>
 
             <label class='facilityClass'>Facility Longitude
-                <input class="facilityInputs" type="text" id="facilityLongitude" /></label>
+                <input class="facilityInputs" type="text" id="facilityLongitude" required/></label>
             <div id="latLngButon">
                 <a href="https://nominatim.openstreetmap.org/ui/search.html"> Find your Latitude and Longitude</a>
             </div>
@@ -146,7 +146,7 @@
                 <input class="facilityInputs" type="checkbox" id="fields" name="facilityFeature" /></label>
 
             <div id='facilityButtons'>
-                <button class='styledButtons' onClick="submitFacility()">Submit Facility</button>
+                <button class='styledButtons'>Submit Facility</button>
             </div>
 
         </form>
