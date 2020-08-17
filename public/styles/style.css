@@ -89,7 +89,6 @@ body {
   width: 100%;
   height: 5%;
   font-size: 125%;
-  padding: 18px;
 }
 
 a {
@@ -338,7 +337,7 @@ main {
 }
 
 #missTitle {
-  margin-bottom: -5%;
+  margin-bottom: -2%;
   font-size: 150%;
 }
 
