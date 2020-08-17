@@ -399,6 +399,8 @@ main {
   /* Rounded corners */
   font-size: 12px;
   /* Increase font size */
+  border:2px solid white;
+  /* Border Color */
 }
 
 #toTop:hover {
