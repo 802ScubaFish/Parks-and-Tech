@@ -512,4 +512,10 @@ main {
     #searchButtons {
       padding-right: 2%;
     }
+    #eventsModal {
+      height:110%
+    }
+    #facilitiesModal {
+      height:110%
+    }
 }
