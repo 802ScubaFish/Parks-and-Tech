@@ -88,16 +88,13 @@ body {
 
 a {
   text-decoration: none;
-
 }
 
 /* Banner and Nav Bar */
 #navBar {
   display: flex;
   flex-direction: row-reverse;
-
 }
-
 
 #topBanner {
   display: flex;
@@ -154,8 +151,8 @@ a {
 
 /* Nav Bar Main Logo */
 #headerLogo {
-  height: 90px;
-  width: 90px;
+  height: 75px;
+  width: 75px;
   display: flex;
   margin-left: 3vw;
   border-radius: 50%;
@@ -235,6 +232,16 @@ main {
 
 .facilityModalInputs {
   width: 11.675vw;
+}
+
+#iconsModal {
+  display: none;
+  background-color: #d8d9d8;
+  height: 125vh;
+  min-width: 100vw;
+  z-index: 1000;
+  position: absolute;
+  padding-top: 1vh;
 }
 
 /* Sets the map explicitely */
@@ -465,6 +472,19 @@ main {
     padding-right: 10%;
     margin: 1vh;
   }
+
+  #iconsModal {
+    display: none;
+    background-color: #d8d9d8;
+    height: 100%;
+    min-width: 0;
+    width: 50vw;
+    left: 50vw;
+    top: 35vh;
+    z-index: 1000;
+    position: absolute;
+    padding-top: 1vh;
+  }
 }
 
 /* At a phone size */
@@ -485,5 +505,4 @@ main {
     #searchButtons {
       padding-right: 2%;
     }
-
 }
