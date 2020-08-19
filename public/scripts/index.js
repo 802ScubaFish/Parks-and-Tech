@@ -134,6 +134,7 @@ function closeIconsModal() {
 // Opens the Events Modal
 function eventsFilter() {
   facilityModal.style.display = "none";
+  topFunction();
 
   if (!eventsModal.style.display) {
     eventsModal.style.display = "block";
@@ -153,7 +154,8 @@ function closeEventsModal() {
 // Opens the Facilities Modal
 function facilitiesFilter() {
   eventsModal.style.display = "none";
-
+  topFunction()
+  
   if (!facilityModal.style.display) {
     facilityModal.style.display = "block";
   } else if (facilityModal.style.display === 'none') {

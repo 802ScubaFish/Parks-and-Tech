@@ -112,16 +112,31 @@ h1 {
     text-align: center;
 }
 
-
-.eventClass {
+.eventClassInputs {
     display: flex;
     justify-content: space-between;
     margin: 1vh;
 }
 
+.eventClass {
+    display: flex;
+    justify-content: space-between;
+    margin: 1vh;
+    margin-top: 5%;
+}
+
+.eventInputsLabels {
+    width: 11.675vw;
+}
 
 .eventInputs {
     width: 11.675vw;
+}
+
+#reqField {
+    display:flex;
+    justify-content: center;
+    align-items: center;
 }
 
 #wholeFacilityForm {
@@ -145,6 +160,15 @@ h1 {
     margin: 1vh;
 }
 
+.facilityClassInputs {
+    display: flex;
+    justify-content: space-between;
+    margin: 1vh;
+}
+
+.facilityInputsLabels {
+    width: 11.675vw;
+}
 
 .facilityInputs {
     width: 11.675vw;
@@ -165,7 +189,8 @@ h1 {
 
 #latLngButton {
     font-size: 80%;
-    margin-left: 2vw;
+    padding-left: 15%;
+    padding-right: 15%;
 }
 
 
@@ -190,5 +215,28 @@ h1 {
 
     #wholeFacilityForm {
         width: 95%
+    }
+
+
+    .eventClassInputs {
+        display: flex;
+        justify-content: center;
+        flex-direction: column;
+        align-items: center;
+    }
+
+    .eventInputsLabels {
+        width: 50vw;
+    }
+
+    .facilityClassInputs {
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        flex-direction: column;
+    }
+
+    .facilityInputsLabels {
+        width: 50vw
     }
 }

@@ -185,6 +185,9 @@ main {
 
 #searchTitle {
   padding-right: 5%;
+  display:flex;
+  align-items: center;
+  justify-content: center;
 }
 
 #searchButtons {
@@ -437,6 +440,10 @@ main {
     justify-content: center;
   }
 
+  #missStatement h5 {
+    font-size: 115%;
+  }
+
   /* ----------------------- */
   #eventsModal {
     display: none;
@@ -518,5 +525,12 @@ main {
     #facilitiesModal {
       height:120%
     }
+
+    #footer {
+      padding-bottom: 65px;
+    }
+    
+
+    
 
 }
