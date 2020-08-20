@@ -25,7 +25,7 @@ let fullEventArray = []
 let eventDate;
 let displayEvent = document.getElementById("displayEvent");
 
-//matches icons with event types
+//Matches icons with event types
 let iconList = {
   biking: "pedal_bike",
   education: "local_library",

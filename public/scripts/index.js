@@ -116,6 +116,7 @@ function createPin(place, coords, uid, facilityIconString) {
 function iconsKey() {
 
   var iconsModal = document.getElementById("iconsModal")
+  topFunction();
 
   if (!iconsModal.style.display) {
     iconsModal.style.display = "block";
@@ -133,7 +134,9 @@ function closeIconsModal() {
 
 // Opens the Events Modal
 function eventsFilter() {
+
   facilityModal.style.display = "none";
+  topFunction();
 
   if (!eventsModal.style.display) {
     eventsModal.style.display = "block";
@@ -150,11 +153,12 @@ function closeEventsModal() {
   eventsModal.style.display = "none";
 }
 
-
 // Opens the Facilities Modal
 function facilitiesFilter() {
-  eventsModal.style.display = "none";
 
+  eventsModal.style.display = "none";
+  topFunction()
+  
   if (!facilityModal.style.display) {
     facilityModal.style.display = "block";
   } else if (facilityModal.style.display === 'none') {
@@ -167,6 +171,7 @@ function facilitiesFilter() {
 
 // When the user clicks on <span> (x), close the facilities modal
 function closeFacilitiesModal() {
+
   facilitiesModal.style.display = "none";
 }
 
@@ -189,6 +194,7 @@ let toTop = document.getElementById("toTop");
 window.onscroll = function () { scrollFunction() };
 
 function scrollFunction() {
+
   if (document.body.scrollTop > 20 || document.documentElement.scrollTop > 20) {
     toTop.style.display = "block";
   } else {
@@ -198,6 +204,7 @@ function scrollFunction() {
 
 // When the user clicks on the toTop button, scroll to the top of the document
 function topFunction() {
+  
   document.body.scrollTop = 0; // For Safari
   document.documentElement.scrollTop = 0; // For Chrome, Firefox, IE and Opera
 }
