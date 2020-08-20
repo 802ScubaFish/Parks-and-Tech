@@ -130,7 +130,7 @@ function sortDates(sortedObj) {
     let eventDate = Date.parse(eventDateString);
 
     // If the current date is one day past the date of any of the events we delete the event.
-    if (eventDate < (Date.now() + 86400000)) {
+    if (eventDate < (Date.now() - 86400000)) {
       myDb.ref("Events/" + objectId).remove().then(function () {
 
       }).catch(function (error) {
